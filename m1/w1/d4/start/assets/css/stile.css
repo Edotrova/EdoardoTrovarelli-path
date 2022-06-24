@@ -1,0 +1,123 @@
+/* IMPOSTAZIONI GENERALI */
+
+body{
+    background-image: url(../img/sfondo.png);
+    font-family: "Poppins", sans-serif;  
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+/* HEADER */
+
+header{
+    margin: 5px;
+    font-weight: bolder; 
+    font-size: 1rem;    
+    line-height: 2rem;
+
+}
+
+.quadrato{
+    background-color: #056f88;
+    height: 200px;
+    width: 350px;
+    padding-top: 10px;
+   font-size: 1rem;}
+   
+
+    div{
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bolder;  
+    border: black;
+  }
+
+    nav{
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    a{
+        color: white;
+    }
+
+    h1{
+        font-weight: bolder;
+        font-size: 2rem;
+        font-variant:small-caps
+        font-size: 1.4 rem;
+        line-height: 3rem;
+    }
+
+    
+
+
+/* MAIN */
+
+article{
+    background-color: white;
+    border: black;
+}
+
+
+main{
+    font-family: "Raleway",sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    font: weight 500px
+}
+
+article code{
+    border: 1px solid black;
+    border border-radius: 5px;
+    background-color: grey
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+
+section p{
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+
+
+
+
+/* ELEMENTI NELL' ASIDE */
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer{
+
+    background-color: white;
+    margin: 20px;
+    margin-top: 0px;
+    box-shadow: 1px 2px rgba(0,0, 0,0.4);
+    background: linear-gradient(to bottom, #005566 0%, #313638);
+    text-align: center;
+}
+
+footer p {
+
+padding-top: 7%;
+padding-bottom: 7%;
+COLOR: white
+}
