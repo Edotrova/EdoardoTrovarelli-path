@@ -6,10 +6,9 @@ html{
 }
 body{
    font: color#393d41;
-   line-height: 1.65rem;
+   line-height: 1.4;
    font-family: 'Open Sans', sans-serif;
-   font-size: 1.2rem;
-
+   font-size: 180%;
 
 
 }
@@ -17,19 +16,16 @@ body{
 header {
     background-color: black;
     text-align: center;
-    padding-top: 3%;
-    padding-bottom: 5%;
+    padding-top: 4%;
+    padding-bottom: 6.5%;
 }
 
-img{
 
-    width: 30%;
-}
 
  section div{
 
-    background-image: url(/images/banner.jpg);
-    background-size: cover;  
+    background-image: url(/assets/images/banner.jpg); 
+    background-size: 140%;
     
     
 }
@@ -40,17 +36,22 @@ h1{
     padding-bottom: 4%;
     font-weight: bold;
     color: #25a2c3;
-    line-height: 1.1;
-    font-size: 3rem;
+    line-height: 0.95;
+    font-size: 180%;
+    font-family: 'Montserrat', sans-serif;
    
 
 }
 
-p{
+div p{
     padding-bottom: 10%;
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.4;
+    line-height: 1.6;
+    font-size: 95%;
+    color: rgba(0, 0, 0,0.7);
 }
+
+
 
 p span{
     background-color: #f04c2f;
@@ -58,10 +59,13 @@ p span{
     padding-top: 3%;
     padding-left: 8%;
     padding-right: 8%;
-border-radius: 8%;
+border-radius: 6%;
 font-family: 'Montserrat', sans-serif;
 font-weight: bold;
 color: white;
+font-size: 80%;
+
+
 }
 
 
@@ -69,16 +73,16 @@ section h2{
     color: #25a2c3;
     font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    padding-top: 5%;
-    ;
+    font-size: 100%;
+    padding-top: 11%;
+
 }
 
 
 span img{
 
-    width: 60%;
-    margin: 2%;
+    width: 72%;
+    margin-bottom: 2%;
     border-radius: 80%;
 }
    
@@ -86,18 +90,34 @@ span img{
 section p{
 
     line-height: 1.6;
-    margin: 3%;
+    margin: 1%;
     
     font-family: 'Open Sans', sans-serif;
+    padding-bottom: 12%;
+
 
     
 
 }
 
+span a{
+    color: white;
+    text-decoration: none;
+    font-size: smaller;
+    
+
+}
+
+
 
 #orange{
-    background-color: #f04c2f;
+    background-color: #e22d0e;
     color: white;
+    padding-top: 4%;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
     
 }
 
@@ -105,7 +125,8 @@ section p{
 #orange h1{
 
     color: white;
-    font-size: 2rem;
+    font-size:150%;
+   
     
 }
 
@@ -113,6 +134,7 @@ section p{
 blockquote{
     font-style: italic;
     padding: 3%;
+    font-size: 80%;
 }
 
 
@@ -120,51 +142,57 @@ blockquote{
 
     font-family: 'Open Sans', sans-serif;
     color: white;
-    font-size: 1.2 rem;   
+       
     padding: 5%;
-    padding-bottom: 7%;
+    padding-bottom: 9%;
 }
 
-#orange span{
+#orange h2 span{
 
-    font-size: 10%;
+    
     padding: 5%;
+    font-size: 70%;
+    font-weight: 130;
+    
+    
 
 }
 
 section article{
 
 
-    padding: 5%;
-    padding-bottom: 20%;
+    padding top:3%;
+    padding-bottom: 10%;
 }
 article{
-    padding: 5%;
+    
     border: 0.1px solid rgba(0, 0, 0,0.1);
     margin-left: 5%;
     margin-right: 5%;
 }
 
 article img{ 
-    padding: 5%;
-    width: 23rem;
+    padding-top: 16%;
+    width: 103%;
     
     
     
+}
+
+
+article span{
+    font-size: 80%;
 }
 
 article h2{
 
-    font-size: 80%;
+    font-size: 90%;
+    padding-bottom: 3%;
 
 }
 
-hr{
-    
-    padding: 3%;
+
    
-
-}
 
 footer{
     color: white;
@@ -176,23 +204,46 @@ footer{
 
 
 footer section{
- font-size: 70%;   
+ font-size: 80%;   
+
+ margin-bottom: 1.5em;
+ color: rgba(255, 255, 255, 0.8)
+}
+
+footer a{
+    color: white;
+}
+
+footer ul{
+    list-style-type: none;
+    opacity: 0.8;
+
 }
 
 
 
 footer h3{
-    font-size:170%;
+    font-size:160%;
     padding-bottom: 4%;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bolder
+    font-weight: bolder;
+    padding-top: 5%;
+
+}
+
+
+footer hr{
+
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 
 footer p{
 
 font-size: 70%;
-padding-top: 5%;
+padding-top: 3%;
 opacity: 70%;
+padding-bottom: 10%;
 }
 
