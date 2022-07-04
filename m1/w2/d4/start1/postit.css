@@ -1,0 +1,93 @@
+
+body{background-color: white;
+ margin-top: 3rem;
+ margin-left: 8rem;
+        
+}
+
+
+section{
+    padding-top: 2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.5rem;
+    background-color: rgb(113, 112, 112);
+    height: 1000px;
+    display: flex;
+    justify-content: space-between;
+   
+    flex-wrap: wrap;
+    width: 55%;
+    height: 400px;
+    
+    
+}
+
+.container h2{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Indie Flower';
+    margin-top: 1.4rem;
+    
+}
+
+
+.container p{
+font-size: 1.5rem;
+padding-top: 1.4rem;
+text-align: center;
+font-family: 'Indie Flower'
+}
+
+.container {
+    width: 230px;
+    height: 170px;
+    padding: 2rem;
+    box-sizing: border-box;
+    align-content: center;
+    
+    
+    
+    
+   
+}
+    
+
+.gialla {
+    background-color: rgb(240, 240, 204);
+    transform: skew(5deg) rotateY(5deg);
+    
+    
+}
+
+.verde {
+    background-color: rgb(203, 232, 203);
+    transform: rotateX(15deg) rotateY(15deg);
+}
+
+.viola{
+    background-color: rgb(217, 199, 233);
+    transform: skew(8deg) rotateY(8deg);
+}
+
+
+
+#n1 {
+    animation-name: animazione1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes animazione1 {
+    from {
+        width: 230px;
+    height: 170px;
+    }
+
+    to {
+        width: 270px;
+    height: 210px;
+    }
+}
+
+
+

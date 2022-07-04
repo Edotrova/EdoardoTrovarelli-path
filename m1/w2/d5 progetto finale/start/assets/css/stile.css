@@ -1,0 +1,674 @@
+/* IMPOSTAZIONI GENERALI */
+
+
+html{
+    font-size: 62.5%
+}
+
+
+
+body{
+    font-family:'Fira Sans',Helvetica, Arial, sans-serif;
+    color: #000;
+    font-size: 1.5rem;
+    inline-size: 1.8;  
+    margin: 0em;
+
+}
+
+i{
+        color: red;
+        font-size: 25px;
+}
+
+h1{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  
+}
+
+h2{
+    font-size: 3.5rem;
+    margin-bottom: 0.7em;
+    line-height: 1.1;
+    font-family:'Fira Sans', sans-serif;
+
+}
+
+/* HEADER */
+
+
+
+.navbar {
+    inline-size:1.2;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 15px 0 #d3d3d3;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+   padding: 0.2em;
+   box-sizing: border-box;
+    padding-top: 1em;
+    
+}
+
+
+
+#voci {
+    text-decoration: none;
+    color: #000;
+    display: none;
+
+}
+
+.kebabmenu{
+    margin-right: -3em;
+}
+
+
+
+
+
+/* MAIN */
+
+
+
+
+#container1{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  padding: 1.4em;
+  padding-bottom: 2.2em;
+  padding-top: 9em;
+  box-sizing: border-box;
+  
+
+
+    }
+
+
+#container1 h1{
+    color: white;
+    font-family:'Fira Sans', sans-serif;
+    font-size: 4.5rem;
+   
+     font-weight: normal;
+     margin-top: 0em;
+   text-shadow: 5em;
+}
+
+#container1 p{
+
+    color: white;
+    font-family:'Fira Sans', sans-serif;
+    margin-bottom: 2em;
+    margin-top: -1em;
+    line-height: 1.6em;
+    font-size: 1.5rem;
+    text-shadow: 5em;
+    
+  
+}
+
+#container1 a{
+
+    background-image: linear-gradient(90deg, #6cc1e2 0, #392f7a);
+    padding: 0.6em;
+    font-size: 1.9rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border:0;
+    cursor: pointer; 
+    width: 40%;
+    margin-bottom: -1em;
+    
+   
+    
+
+
+}
+
+#container2 {
+    padding: 1.5em;
+}
+#container2 h2{
+
+    font-weight: normal;
+    text-align: center;
+    font-size: 3.3rem;
+    margin-bottom: 0.7em;
+    line-height: 1.1;
+    text-decoration: none;
+}
+
+#container2 p{
+
+    font-size: 0.85em;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.container3 div{
+
+        margin-bottom: 1.4em;
+         line-height: 1.8;
+         text-align: center;
+         font-size: 0.85em;
+}    
+
+
+.container3 h3{
+
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    line-height: 1;
+    text-decoration: none;
+    font-weight: normal;
+    margin-top: 0em;
+}
+
+
+#container4 {
+
+    background-color: #0c0633;
+    text-align: center;
+    padding-top: 3.5em;
+    padding-bottom: 7em;
+    
+    
+}
+
+
+#container4 h2{
+
+   
+    font-weight: normal;
+    text-align: center;
+    color: white;
+    margin-left: 0.9em;
+    margin-right: 0.9em;
+    font-size: 2.7rem;
+}
+
+
+#container4 p{
+    color: white;
+    line-height: 2em;   
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+}  
+
+#container4 a{
+    background-image: linear-gradient(90deg, #6cc1e2 0, #392f7a);
+    padding: 1.2rem 1.6rem;
+    font-size: 1.9rem;
+    color: white;
+    text-decoration: none;
+    border:0;
+    cursor: pointer; 
+    position: relative;
+    top: 1em;
+
+    
+}
+
+
+#notebook img{
+  
+    display: inline-block;
+	width: 85%;
+    height: 250px;
+    margin-top: 3rem;
+    border: solid 1px #dee1e3;
+    margin-left: 2rem;
+    margin-right: 2.5em;
+
+}
+   
+
+
+
+.container5 h3 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.6em;
+
+    
+}
+.container5 p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-right: 1.5rem;
+   
+}
+
+#container6 {
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    line-height: 1.7em;
+    text-align: center;
+    padding-top: 1.4em;
+    
+}
+
+
+#container6 p{
+    padding-bottom: 1.3em;
+    padding-top: 1.2em;
+}
+
+#tabella {
+
+   display: flex;
+   
+}
+
+
+    
+/* FOOTER */
+
+footer {
+   
+    border-top: 1px solid #eee;
+    background-color: rgb(238, 238, 238);
+   
+}
+    footer div {
+        
+        padding-top: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 2rem;
+    }
+    
+    footer nav li {
+        list-style-type: none;
+        display: inline-block;
+
+    }
+
+
+
+
+    footer h2 {
+        font-size: 1.8rem;
+        padding-bottom: 1em;
+        line-height: 1;
+        font-weight: normal;
+    }
+
+    footer p{
+
+        line-height: 2.3rem;
+        
+    }
+    footer fieldset {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        
+    }
+    footer input {
+        font-size: 2rem;
+        padding: 1rem 1rem;
+        width: 90%; 
+        margin-top: -0.4em;
+        margin-left: -0.39em;
+        
+       
+    }
+    footer button {
+    background-image: linear-gradient(90deg, #6cc1e2 0, #392f7a);
+    padding: 0.85em;
+    font-size: 1.9rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border:2px solid black;
+    cursor: pointer; 
+    width: 100%;
+    margin-left: -0.5em;
+    
+    
+    }
+
+    footer #address {
+        line-height: 1.7em;
+        font-weight: normal;
+        padding-bottom: 4em;
+        font-size: 0.9em;
+        text-decoration: none;
+        font-weight: normal;
+    
+    }
+
+    
+
+
+    #container6{
+        
+            margin-top: 4em;
+            position: relative;
+            ;
+            
+    }
+
+    #container6 h2{
+        font-size: 1.5em;
+        padding-bottom: 0.1em;
+        margin-bottom: 0.3em;
+        font-weight: normal;
+    }
+
+    #container6 fieldset{
+        padding: 1em;
+        padding-top: 0.em;
+        padding-left: 2em;
+        width: 1px;
+
+        
+    }
+ #container6 #nome{
+        font-weight: hidden;
+        margin-bottom: 0.7em;
+        width: 264.4px;
+        margin-left: -2em;
+    }
+
+    #container6 #email {
+        margin-bottom: 0.7em;
+        width: 264.4px;
+        margin-left: -2em;
+    }    
+
+    #container6 #testo{
+        margin-bottom: 0.7em;
+        width: 264.4px;
+        margin-left: -2em;
+
+    }
+
+    fieldset button{
+
+        background-image: linear-gradient(90deg, #6cc1e2 0, #392f7a);
+    
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border:0;
+    cursor: pointer; 
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  
+    
+    }
+    
+   
+
+   
+.container7 {
+
+    margin-top: 5em;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1.5em;
+    line-height: 1.5em;
+    
+}
+
+.container7 p{
+    margin-bottom: 2em;
+}
+
+.container8 img{
+    padding-bottom: 1em;
+}
+
+
+
+table {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width:768px) {
+    html {font-size: 1em;} 
+
+    
+
+
+    #container1  h1{
+
+            font-size: 2em;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+    }
+
+
+    #container1 p{
+
+        font-size: 0.65em;
+        margin-left: 5em;
+        margin-right: 6.5em;
+    }
+
+    #container1 a{
+
+        padding: 0.4em;
+        width: 15%;
+        font-size: 0.7em;
+        margin-left: 5em;
+        margin-right: 1.5em;
+    }
+
+   .container3{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 1em;
+    margin-right: 1em;
+    
+    
+     }
+
+     #container2 {
+        padding:0.1em ;
+     }
+
+     #container2 h2{
+
+        font-size: 1.5em;
+
+
+     }
+
+     #container2 p{
+
+        font-size: 0.65em;
+        margin-left: 5em;
+     ;
+        padding: 0.1em;
+        text-align: center;
+     }
+
+   .container3 h3{
+        font-size: 1.2em;
+     
+    
+     }
+
+     .container3 p{
+        font-size: 0.7em;
+       padding: 6.3em;
+       margin-top: -4em;
+       margin-bottom: -4em;
+       
+
+ 
+    }
+
+#notebook {
+display: flex;
+justify-content: space-evenly;
+}
+
+#notebook img{
+  
+    
+	width: 85%;
+    height: 250px;
+    margin-top: 3rem;
+    border: solid 1px #dee1e3;
+    margin-left: 2rem;
+    margin-right: 2.5em;
+
+}
+   
+
+
+
+.container5 h3 {
+    font-weight: normal;
+    text-align: center;
+
+    
+}
+.container5 p {
+    font-size: 0.6em;
+    text-align: center;
+    margin-right: 1.5em;
+   
+}
+
+#notebook img{
+
+    width: 300px;
+    height: 300px;
+   
+    
+}
+  
+
+#container4 {
+    padding-top: 2em;
+    padding-bottom: 5em;
+}
+
+#container4 h2{
+
+    font-size: 1.5em;
+}
+
+#container4 p{
+    font-size: 0.6em;
+}
+
+#container4 a{
+    font-size: 0.7em;
+    padding: 0.9rem 0.7rem;
+    font-size: 1rem;
+    
+}
+footer{
+    display:flex;
+    flex-direction:row;
+    
+}
+
+
+.container8 {
+
+display: flex;
+justify-content: space-between;
+
+}
+
+.container7{
+    font-size: 0.7em;
+}
+
+.container8 p {
+    font-size:0.7em;
+}
+
+#table {
+
+    font-size: 0.8em;
+    display: inline-block;
+
+}
+
+.footerb {
+    display: flex;
+
+
+}
+
+    }
+
+
+    @media screen and (min-width:1170px) {
+        #container1 #container2 #container3 #container4 #notebook .container5 {
+
+width: 1170px;
+margin: 0 auto;
+        }
+
+
+
+#notebook img {
+
+    width: 300px;
+    
+    
+}
+
+#notebook {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer {
+
+   display: flex;
+    margin-left: 5%;
+    margin-right:5%;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+#footer h2{
+
+font-size: 0.6em;
+padding: 2em;
+}
+
+#footer p{
+
+    font-size: 0.5em;
+}
+
+#footer fieldset{ width:40%
+   
+}
+
+
+
+    }
