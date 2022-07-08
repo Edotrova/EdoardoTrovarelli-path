@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/stile.css">
+</head>
+
+<body>
+
+
+    <div id="calcolatrice">
+        <input id="display" placeholder="0" type="text">
+        <section id="tasti">
+            <button carattere="7" onclick="aggiungiCarattere(this)">7</button>
+            <button carattere="8" onclick="aggiungiCarattere(this)">8</button>
+            <button carattere="9" onclick="aggiungiCarattere(this)">9</button>
+            <button carattere="/" onclick="aggiungiCarattere(this)">/</button>
+            <button carattere="4" onclick="aggiungiCarattere(this)">4</button>
+            <button carattere="5" onclick="aggiungiCarattere(this)">5</button>
+            <button carattere="6" onclick="aggiungiCarattere(this)">6</button>
+            <button carattere="*" onclick="aggiungiCarattere(this)">X</button>
+            <button carattere="1" onclick="aggiungiCarattere(this)">1</button>
+            <button carattere="2" onclick="aggiungiCarattere(this)">2</button>
+            <button carattere="3" onclick="aggiungiCarattere(this)">3</button>
+            <button carattere="-" onclick="aggiungiCarattere(this)">-</button>
+            <button class="grandi" onclick="cancella()">C</button>
+            <button class="grandi" carattere="0" onclick="(this)">0</button>
+            <button class="grandi" carattere="." onclick="(this)">.</button>
+            <button class="grandi" carattere="+" onclick="(this)">+</button>
+            <button id="lungo" onclick="calcola()">=</button>
+        </section>
+    </div>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
