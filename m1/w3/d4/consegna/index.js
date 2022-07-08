@@ -2,46 +2,43 @@
     //punto1
 
 
-let titolo = 'Corso di Javacript'
+let titolo = 'Corso di Javacript'    //stringadipartenza
 
-let maius = titolo.toUpperCase();
+let maius = titolo.toUpperCase();   //metodi maius - minus e divisione in elementi
 console.log(maius);
 
 let minus = titolo.toLowerCase();
 console.log(minus);
 
 
-        //punto2
-
 let divisione = titolo.split('');
 console.log(divisione);
 
-let nuovoTitolo2 =(divisione[0]) + (divisione[2]);
+let nuovoTitolo2 =(divisione[0]) + (divisione[2]); //unicastringa
 console.log(nuovoTitolo);
 
 
-        //punto3
+        //punto2
 
 
-let gruppo = ["Fabiola", "Edoardo", "Luigi", "Giuseppe"]
+let gruppo = ["Fabiola", "Edoardo", "Luigi", "Giuseppe"] //array di persone
 
-console.log(gruppo[2]);
+console.log(gruppo[2]); // lettura terzo elemento
 
-let amici = Alessandro
-gruppo.push(amici);
+let amici = Alessandro              //variabile let 
+gruppo.push(amici);        // passa all'array un valore tramite una variabile 
 console.log(gruppo);
 
-console.log(gruppo.length);
-
-//punto4 
+console.log(gruppo.length);   // lettura lunghezza array
 
 
 
+//punto4                    //creare una funzione all'interno della quale utilizzare i valori tratti da un array
 
 function sum(){
 
-    let numeri = [2, 6, 10];
-    return numeri[0]+ numeri [1] + numeri[2];
+    let numeri = [2, 6, 10];             
+    return numeri[0]+ numeri [1] + numeri[2];  
 
 }
 
@@ -49,7 +46,7 @@ sommma()
 console.log(somma())
 
 
-//punto5
+//punto5        //metodi push/pop  e shift/unishift
 
 
 let frutta = ['banana', 'fragola', 'mela', 'anguria']

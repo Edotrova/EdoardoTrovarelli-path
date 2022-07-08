@@ -1,0 +1,14 @@
+#elementi{
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding: 2em;
+    padding-left: 3em;
+}
+
+
+
+#bottoni{
+    padding: 2em;
+}

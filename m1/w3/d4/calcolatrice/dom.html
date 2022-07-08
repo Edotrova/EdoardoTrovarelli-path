@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input id='display' placeholder="0" type="text">
+        
+        <script>
+
+                let calcolo = 2 + 2;
+                console.log(calcolo)
+                console.log(eval(calcolo)) //vede le stringhe e restituisce valore assoluto
+                eval('alert("ciao")')
+
+                /*
+                ottenere totale da un input contenente operazioni matEmatiche
+                */
+
+
+                function calcola() {
+                let display = document.getElementById('display');
+                display.value = eval(display.value)
+
+                }
+
+                function aggiungiSimbolo(){
+
+
+                }
+        </script>
+
+</body>
+</html>
