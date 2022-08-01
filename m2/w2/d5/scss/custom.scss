@@ -1,46 +1,120 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'navbar';
+@import 'slider';
+@import 'functions';
 
 
 
-.navbar{
-    background-color:#cce2ff;
-    height: 100px;
-    font-family: 'Share Tech Mono', monospace;
-    
-   
-   
-    
+body{
+    @include text;
 }
 
+ #primopiano{
+  
+   background-image: url(../asset/back-img.jpg) ; 
+    background-size: cover; 
+   max-width: 100%;
+  max-height: 100%;
+   min-height: 90vh;
+ }
 
-#primopiano{
-    background-image: url(../asset/back-img.jpg) ; 
-    background-size: cover;
-    height: 1000px;
-    
-    
+ @media screen and (max-width: 1400px) {
+    #primopiano {
+        @include imgresp;
+       min-height: 60vh;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    #primopiano {
+        @include imgresp;
+       min-height: 45vh;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    #primopiano {
+        @include imgresp;
+       min-height: 40vh;
+    }
+  }
+
+
+#myVideo {
+    max-width: 100%;
 }
 
 #primopiano h1{
 
-margin-top: 20%;
-font-family: 'Share Tech Mono', monospace;
+   @include text-h1;
+   margin-top: 20%;
+   
 
 }
 
-#primopiano h1 span{
-
-    opacity: 0.8;
-
-}
 
 #primopiano button{
-    font-family: 'Share Tech Mono', monospace;
-    border: none;
+   
+    @include text; 
+   border: none;
+   font-size: 1.5rem;
    background-color: transparent;
    box-shadow: 0 0 12px 3px;
    margin-top: 20px;
+   width: 50%;
+   text-align: center;
+   padding: 15px;
+   
+   
     
 }
 
+#partnership {
+  
+    @include background;
+    
+}
+
+@media screen and (max-width: 470px) {
+
+
+.grid-item img {
+    width: 40%;
+    height: 40%;
+}
+
+
+}
+
+#descrizionepartner {
+    
+    font-size: 1.3rem;
+    
+    
+}
+
+
+.btn-part {
+
+    border: none;
+   background-color: transparent;
+   box-shadow: 0 0 6px 3px;
+   margin-top: 20px;
+   padding: 2em;
+   font-size: 1.3em;
+
+}
+
+#servicesection {
+   
+    @include background;
+
+    
+}
+
+
+
+footer {
+    background-color: black;
+}

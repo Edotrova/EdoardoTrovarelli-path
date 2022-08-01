@@ -1,3 +1,46 @@
 
+$first-color: rgb(249, 245, 245);
 
+$white: $first-color;
 
+$secondary-color: rgb(34, 3, 3);
+
+$first-font: 'Share Tech Mono', monospace;
+
+$secondary-font: 'Roboto', sans-serif;
+
+$dropdown-link-hover-bg: rgb(2, 3, 54);
+
+$footer-background-color: white;
+
+@mixin text {
+
+    color: $first-color;
+    font-family: $first-font;
+    
+}
+
+@mixin text-h1 {
+    @include text;
+    font-size: 3rem;
+}
+
+@mixin background {
+    background-color: transparent;
+    background-image: linear-gradient(46deg, #101023 14%, #192155 83%);
+}
+
+@mixin imgresp {
+
+    background-image: url(../asset/looking-into-future-of-metaverse.jpeg.optimal.jpeg) ; 
+    background-size: cover; 
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+@mixin function {
+    color: footerfont($footer-background-color);
+    
+
+}
