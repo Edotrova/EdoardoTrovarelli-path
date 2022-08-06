@@ -3,7 +3,7 @@
 const apiUrl = 'users.json';
 
 const lista = document.querySelector('#lista');
-const campiVisibili = ['username', 'firstname', 'lastname', 'gender', 'profileURL', 'email']
+const campiVisibili = ['username', 'firstName', 'lastName', 'gender', 'profileURL', 'email']
 
 
     fetch(apiUrl)
@@ -15,6 +15,7 @@ const campiVisibili = ['username', 'firstname', 'lastname', 'gender', 'profileUR
         for (let user of res) {
 
             let tr = document.createElement('tr');
+
                
 
             for (prop in user) {
@@ -24,7 +25,13 @@ const campiVisibili = ['username', 'firstname', 'lastname', 'gender', 'profileUR
                     let td = document.createElement('td');
                     td.innerHTML = user[prop]
                     tr.append(td)
+            
+                 if (prop == 'profileURL') {
 
+                    let img = document.createElement('img');
+                    td.innerHTML = '';
+                    img.src = user[prop];
+                    td.append(img);
 
                 }
 
@@ -34,4 +41,5 @@ const campiVisibili = ['username', 'firstname', 'lastname', 'gender', 'profileUR
 
             lista.append(tr)
         }
-    })
+    }
+})

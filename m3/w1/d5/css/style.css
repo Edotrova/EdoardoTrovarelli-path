@@ -8,3 +8,7 @@ table {
 border: 10px solid black;
 
 }
+
+img {
+    width: 240px; height: 180px;
+}
