@@ -1,11 +1,12 @@
-table{
-    font-size: 2rem;
-    
-}
+ 
 
 table {
 
-border: 10px solid black;
+font-size: 2rem;
+border: 10px solid;
+background-color: grey;
+color: black;
+font-weight: bolder;
 
 }
 
