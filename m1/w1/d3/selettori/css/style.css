@@ -1,0 +1,43 @@
+/*i colori possono essere scelti per nome:
+red, yellow ecc...
+Devono però essere colori preimpostati nel linguaggio
+
+Posso anche utilizzare i colori esadecimali
+essempio: 
+
+#fff => bianco
+
+Posso usare anche i colori indicati in rgb
+rgb(rosso, verde, blue) i valori possono andare da 0 a 255
+dove 0 è nero, e 255 è bianco
+
+per usare rgb con trasparenza scriveremo rgba()
+
+rgba(rosso, verde, blue, opacità)
+
+esempio: rgba(0,0,0,0.5) => nero con 50% trasparenza
+
+*/
+div{/*selezione attraverso il tag */
+    color: rgb(255, 0, 0);
+}
+
+#div-blue{ /* selezione attraverso l'id */
+    color: blue
+}
+
+.testo-verde{ /* selezione attraverso la classe */
+    color: green;
+}
+
+span{
+    font-style: italic;
+}
+
+#area-grassetto > span{
+    font-weight:600;
+}
+
+#area-grassetto div span{
+    background-color: blue;
+}

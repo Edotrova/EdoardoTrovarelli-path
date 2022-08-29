@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-
     <style>
         table{
             width: 100%;
@@ -16,19 +15,18 @@
             border: 1px solid black
         }
     </style>
-
-<table>
-
-        <tr>
-            <th>nome</th>
-            <th>cognome</th>
-        </tr>
-
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
         <tr>
             <td>Mario</td>
             <td>Rossi</td>
         </tr>
-
         <tr>
             <td>Maria</td>
             <td>Bianchi</td>
@@ -38,35 +36,27 @@
 
     <hr>
 
-        <table>
-            <caption>Intestazione della tabella</caption>
-            <tr>
-                <td>cella</td>
-                <td>cella</td>
-                <td>cella</td>
-            </tr>
-            <tr>
-                <td>cella</td>
-                <td>cella</td>
-                <td>rowspan</td>
-            </tr>
-            <tr>
-                <td>cella</td>
-                <td>cella</td>
-                <td>cella</td>
+    <table>
+        <caption>Intestazione della tabella</caption>
+        <tr>
+            <td>cella</td>
+            <td>cella</td>
+            <td rowspan="2">cella</td>
+        </tr>
+        <tr>
+            <td>cella</td>
+            <td>cella</td>
+        </tr>
+        <tr>
+            <td>cella</td>
+            <td>cella</td>
+            <td>cella</td>
+        </tr>
+        <tr>
+            <td colspan="2">cella</td>
+            <td>cella</td>
+        </tr>
+    </table>
 
-
-            </tr>
-            <tr>
-                <td colspan="2">cella</td>
-                <td>cella</td>
-
-
-            </tr>
-
-
-
-        </table>
-
-    </body>
-    </html>
+</body>
+</html>

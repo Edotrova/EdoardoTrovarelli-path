@@ -1,36 +1,42 @@
-#main-header .list-item a{/* peso: 111 */
-    text-decoration:none;
-    color: #000;
-}
-#main-header a{/* peso: 101 */
-    text-decoration:none;
+blockquote + p {/*il primo tag p dopo ogni blockquote(adiacente)*/
     color: red;
 }
 
-a{/* peso: 1 */
+span ~ b{/* tutti i b che seguono uno span */
     color: blue;
 }
 
-h1, h2, h3, h4, h5, h6{
-    color: aqua;
-}
-
-/*
-tag: peso 1
-classi: peso 10
-id: peso 100
-*/
-
-
-/* altri modi per selezionare */
-
-div.sfondo-blue{/*funziona solo se la classe è applicata ad un div*/
+button{
     background-color:red;
-}
-div.sfondo-blue.testo-grassetto{/*funziona solo se entrambe le classi sono applicate contemporaneamente allo stesso div*/
-    font-weight: bold;
+    transition: background-color 1s;
 }
 
-.sfondo-blue, .testo-grassetto{/* tutti gli elementi che hanno classe sfondo-blue, e tutti gli elementi che hanno classe testo-grassetto*/
-    height: 50px;
+button:hover{/*quando passo con il mouse sopra ad un button*/
+    background-color:yellow;
+    border: none;
+}
+
+ul li:not(.escluso) {/*tutti i li di opgni ul tranne quello con classe escluso*/
+    text-decoration: overline;
+}
+
+ul li:last-child{/*ultimo li di ogni ul*/
+    color: purple;
+}
+
+ul li:nth-of-type(3){/*terzo elementi li di ogni ul*/
+    background-color: red;
+}
+
+table tr:nth-of-type(odd){/*elementi tr dispari di ogni tabella*/
+    background-color: #ccc
+}
+
+/* pseudoelementi */
+
+table tr td::before{/*elemento che viene inserito prima del contenuto*/
+    content: "@"
+}
+table tr td::after{/*elemento che viene inserito dopo il contenuto*/
+    content: "@"/*content è obbligatorio(anche con virgolette vuote va bene)*/
 }

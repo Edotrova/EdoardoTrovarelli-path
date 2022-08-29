@@ -34,3 +34,4 @@ div.sfondo-blue.testo-grassetto{/*funziona solo se entrambe le classi sono appli
 .sfondo-blue, .testo-grassetto{/* tutti gli elementi che hanno classe sfondo-blue, e tutti gli elementi che hanno classe testo-grassetto*/
     height: 50px;
 }
+
