@@ -1,16 +1,25 @@
-{
-  "users": [
-    {
+[
+  {
       "nome": "Edoardo",
       "data": "12/02/20",
-      "commento": "Messi > Ronaldo",
-      "id": 1
-    },
-    {
-      "nome": "Edoardo",
-      "data": "12/02/20",
-      "commento": "Messi > Ronaldo",
-      "id": 2
-    }
-  ]
-}
+      "commento": "Messi > Ronaldo"
+  },
+
+  {
+      "nome": "Marco",
+      "data": "22/12/10",
+      "commento": "due e due fa quattro"
+  },
+
+  {
+      "nome": "Luca",
+      "data": "16/07/21",
+      "commento": "Una bella macchina"
+  },
+
+  {
+      "nome": "Amelia",
+      "data": "02/02/04",
+      "commento": "Salve a tutti"
+  }
+]

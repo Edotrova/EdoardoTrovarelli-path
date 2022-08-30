@@ -23,8 +23,8 @@ if (Math.abs(randomNum - player2) > Math.abs(randomNum - player1))
 
 // switch (randomNum) {
 
-// case  player1 == randomNum : (console.log("player1 ha vinto"))
-// break;
+// // case  player1 == randomNum : (console.log("player1 ha vinto"))
+// // break;
 
 // case 1 : player2 == randomNum;
 // console.log("player2 ha vinto")

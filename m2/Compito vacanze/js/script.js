@@ -1,7 +1,7 @@
 
 let target = document.querySelector('#lista');
 
-fetch('utenti.json')
+fetch('db.json')
 .then(res => res.json())
 .then(utenti => {
 
@@ -60,15 +60,12 @@ bottone.addEventListener('click', function(e) {
     creaGuest(nome.value, data.value, commento.value);
    
 
-
-    
     let guest = new GuestElement(nome.value, data.value, commento.value);
     guestBook.push(guest);
 
     let utentiJson = JSON.stringify(guestBook);//trasformo l'oggetto in stringa json
     localStorage.setItem('lista', utentiJson)//salvo l'oggetto
 
-    
 
     document.querySelector('#formGuest').reset()
 
