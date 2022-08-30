@@ -1,9 +1,9 @@
 
-var deposit:number = 10000;
+var deposit:number = 10000; //inizializziamo la variabile globale "deposit" 
 
-var addInterest:number = deposit/100*10;
+var addInterest:number = deposit/100*10; //inizializziamo la variabile globale addInterest
 
-class SonAccount {
+class SonAccount {      //creazione della Classe SonAccount che avrà come metodi opeDeposit e oneWhitDraw
 
     public name: string;
     public surname: string;
@@ -16,7 +16,7 @@ class SonAccount {
 
 }
 
-oneDeposit():any {
+oneDeposit():void {   //primo metodo
 
 
     let newBalanceInit:number = this.balanceInit + deposit;
@@ -24,7 +24,7 @@ oneDeposit():any {
    
 }
 
-oneWhitDraw():any {
+oneWhitDraw():void {  //secondo metodo
 
     let newBalanceInit:number = this.balanceInit + deposit;
     let whitdraw:number = 5000;
@@ -34,13 +34,13 @@ oneWhitDraw():any {
 
 }
 
-let son = new SonAccount('Edoardo', 'Trovarelli', 0)
+let son = new SonAccount('Edoardo', 'Trovarelli', 0)  //nuova istanza della Classe SonAccount
 
-son.oneDeposit();
+son.oneDeposit(); //scateniamo le due funzioni oneDeposit e oneWhitDraw
 
 son.oneWhitDraw();
-
-class MotherAccount extends SonAccount {
+ 
+class MotherAccount extends SonAccount {   //creazioni nuova Classe estendendo la classe SonAccount 
 
    public addInterest: number; 
     constructor(name: string, surname: string, accountBalance: number, addInterest:number ) {
@@ -50,7 +50,7 @@ super(name, surname, accountBalance)
 this.addInterest = addInterest;
 }
 
-oneMotherDeposit():any {
+oneMotherDeposit():void {
 
 
     let newMotherBalanceInit:number = this.balanceInit + deposit - this.addInterest ;
@@ -58,7 +58,7 @@ oneMotherDeposit():any {
    
 }
 
-oneMotherWhitDraw():any {
+oneMotherWhitDraw():void {
 
     let newBalanceInit:number = this.balanceInit + deposit;
     let whitdraw:number = 5000;

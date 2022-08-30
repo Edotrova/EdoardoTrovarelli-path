@@ -13,8 +13,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var deposit = 10000;
-var addInterest = deposit / 100 * 10;
+var deposit = 10000; //inizializziamo la variabile globale "deposit" 
+var addInterest = deposit / 100 * 10; //inizializziamo la variabile globale addInterest
 var SonAccount = /** @class */ (function () {
     function SonAccount(name, surname, accountBalance) {
         this.name = name;
@@ -33,8 +33,8 @@ var SonAccount = /** @class */ (function () {
     };
     return SonAccount;
 }());
-var son = new SonAccount('Edoardo', 'Trovarelli', 0);
-son.oneDeposit();
+var son = new SonAccount('Edoardo', 'Trovarelli', 0); //nuova istanza della Classe SonAccount
+son.oneDeposit(); //scateniamo le due funzioni oneDeposit e oneWhitDraw
 son.oneWhitDraw();
 var MotherAccount = /** @class */ (function (_super) {
     __extends(MotherAccount, _super);
