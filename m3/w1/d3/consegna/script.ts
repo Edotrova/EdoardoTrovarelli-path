@@ -2,13 +2,10 @@
 abstract class Tasse{
     codredd:number;
     redditoAnnuoLordo:number;
-    tasseInps:number;
-    tasseIrpef:number;
-    constructor(codredd:number,redditoAnnuoLordo:number,tasseInps:number,tasseIrpef:number){
+    constructor(codredd:number,redditoAnnuoLordo:number){
         this.codredd = codredd;
         this.redditoAnnuoLordo =redditoAnnuoLordo;
-        this.tasseInps = tasseInps;
-        this.tasseIrpef = tasseIrpef;
+       
     }
 
     getTasseInps():number{
@@ -59,8 +56,8 @@ class Lavoratore extends Tasse {
      nome:string;
      cognome:string;
      professione:string;
-        constructor(nome:string, cognome:string, professione:string, codredd:number,redditoAnnuoLordo:number,tasseInps:number,tasseIrpef:number){
-        super(codredd,redditoAnnuoLordo,tasseInps,tasseIrpef)
+        constructor(nome:string, cognome:string, professione:string, codredd:number,redditoAnnuoLordo:number){
+        super(codredd,redditoAnnuoLordo)
         this.nome = nome;
         this.cognome = cognome;
         this.professione = professione;
@@ -85,7 +82,7 @@ getRedditoAnnuoNetto():number{
 }
 
 
-let Mario = new Lavoratore ('Mario', 'Rossi', 'consulente', 1234, 30000);
-
+let Mario = new Lavoratore ('Mario', 'Rossi', 'consulente', 1234, 10000);
+console.log(Mario.getRedditoAnnuoNetto())
 
 

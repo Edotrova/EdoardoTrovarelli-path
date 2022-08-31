@@ -14,11 +14,9 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Tasse = /** @class */ (function () {
-    function Tasse(codredd, redditoAnnuoLordo, tasseInps, tasseIrpef) {
+    function Tasse(codredd, redditoAnnuoLordo) {
         this.codredd = codredd;
         this.redditoAnnuoLordo = redditoAnnuoLordo;
-        this.tasseInps = tasseInps;
-        this.tasseIrpef = tasseIrpef;
     }
     Tasse.prototype.getTasseInps = function () {
         var impostaInps = (this.redditoAnnuoLordo / 100 * 33);
@@ -57,8 +55,8 @@ var Tasse = /** @class */ (function () {
 }());
 var Lavoratore = /** @class */ (function (_super) {
     __extends(Lavoratore, _super);
-    function Lavoratore(nome, cognome, professione, codredd, redditoAnnuoLordo, tasseInps, tasseIrpef) {
-        var _this = _super.call(this, codredd, redditoAnnuoLordo, tasseInps, tasseIrpef) || this;
+    function Lavoratore(nome, cognome, professione, codredd, redditoAnnuoLordo) {
+        var _this = _super.call(this, codredd, redditoAnnuoLordo) || this;
         _this.nome = nome;
         _this.cognome = cognome;
         _this.professione = professione;
@@ -74,4 +72,5 @@ var Lavoratore = /** @class */ (function (_super) {
     };
     return Lavoratore;
 }(Tasse));
-var Mario = new Lavoratore('Mario', 'Rossi', 'consulente', 1234, 30000);
+var Mario = new Lavoratore('Mario', 'Rossi', 'consulente', 1234, 10000);
+console.log(Mario.getRedditoAnnuoNetto());
