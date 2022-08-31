@@ -16,18 +16,18 @@ class SonAccount {      //creazione della Classe SonAccount che avrà come metod
 
 }
 
-oneDeposit():void {   //primo metodo
+oneDeposit(deposit:number):void {   //primo metodo
 
 
-    let newBalanceInit:number = this.balanceInit + deposit;
-    console.log(newBalanceInit);
+    this.balanceInit += deposit; 
+   
    
 }
 
-oneWhitDraw():void {  //secondo metodo
+oneWhitDraw(whitdraw:number):void { //primo metodo//secondo metodo
 
     let newBalanceInit:number = this.balanceInit + deposit;
-    let whitdraw:number = 5000;
+  
     let SecondBalanceInit:number = newBalanceInit - whitdraw;
     console.log(SecondBalanceInit);
 }
@@ -36,9 +36,9 @@ oneWhitDraw():void {  //secondo metodo
 
 let son = new SonAccount('Edoardo', 'Trovarelli', 0)  //nuova istanza della Classe SonAccount
 
-son.oneDeposit(); //scateniamo le due funzioni oneDeposit e oneWhitDraw
-
-son.oneWhitDraw();
+son.oneDeposit(500); //scateniamo le due funzioni oneDeposit e oneWhitDraw
+console.log(son.balanceInit)
+son.oneWhitDraw(20);
  
 class MotherAccount extends SonAccount {   //creazioni nuova Classe estendendo la classe SonAccount 
 

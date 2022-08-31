@@ -1,60 +1,42 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+"use strict";
 var deposit = 10000; //inizializziamo la variabile globale "deposit" 
 var addInterest = deposit / 100 * 10; //inizializziamo la variabile globale addInterest
-var SonAccount = /** @class */ (function () {
-    function SonAccount(name, surname, accountBalance) {
+class SonAccount {
+    constructor(name, surname, accountBalance) {
         this.name = name;
         this.surname = surname;
         this.balanceInit = accountBalance;
     }
-    SonAccount.prototype.oneDeposit = function () {
-        var newBalanceInit = this.balanceInit + deposit;
-        console.log(newBalanceInit);
-    };
-    SonAccount.prototype.oneWhitDraw = function () {
-        var newBalanceInit = this.balanceInit + deposit;
-        var whitdraw = 5000;
-        var SecondBalanceInit = newBalanceInit - whitdraw;
-        console.log(SecondBalanceInit);
-    };
-    return SonAccount;
-}());
-var son = new SonAccount('Edoardo', 'Trovarelli', 0); //nuova istanza della Classe SonAccount
-son.oneDeposit(); //scateniamo le due funzioni oneDeposit e oneWhitDraw
-son.oneWhitDraw();
-var MotherAccount = /** @class */ (function (_super) {
-    __extends(MotherAccount, _super);
-    function MotherAccount(name, surname, accountBalance, addInterest) {
-        var _this = _super.call(this, name, surname, accountBalance) || this;
-        _this.addInterest = addInterest;
-        return _this;
+    oneDeposit(deposit) {
+        this.balanceInit += deposit;
     }
-    MotherAccount.prototype.oneMotherDeposit = function () {
-        var newMotherBalanceInit = this.balanceInit + deposit - this.addInterest;
+    oneWhitDraw(whitdraw) {
+        let newBalanceInit = this.balanceInit + deposit;
+        let SecondBalanceInit = newBalanceInit - whitdraw;
+        console.log(SecondBalanceInit);
+    }
+}
+let son = new SonAccount('Edoardo', 'Trovarelli', 0); //nuova istanza della Classe SonAccount
+son.oneDeposit(500); //scateniamo le due funzioni oneDeposit e oneWhitDraw
+console.log(son.balanceInit);
+son.oneWhitDraw(20);
+class MotherAccount extends SonAccount {
+    constructor(name, surname, accountBalance, addInterest) {
+        super(name, surname, accountBalance);
+        this.addInterest = addInterest;
+    }
+    oneMotherDeposit() {
+        let newMotherBalanceInit = this.balanceInit + deposit - this.addInterest;
         console.log(newMotherBalanceInit);
-    };
-    MotherAccount.prototype.oneMotherWhitDraw = function () {
-        var newBalanceInit = this.balanceInit + deposit;
-        var whitdraw = 5000;
-        var SecondMotherBalanceInit = newBalanceInit - whitdraw - this.addInterest;
+    }
+    oneMotherWhitDraw() {
+        let newBalanceInit = this.balanceInit + deposit;
+        let whitdraw = 5000;
+        let SecondMotherBalanceInit = newBalanceInit - whitdraw - this.addInterest;
         console.log(SecondMotherBalanceInit);
-    };
-    return MotherAccount;
-}(SonAccount));
-var mother = new MotherAccount('Maria', 'Rossi', 0, addInterest);
+    }
+}
+let mother = new MotherAccount('Maria', 'Rossi', 0, addInterest);
 mother.oneMotherDeposit();
 mother.oneMotherWhitDraw();
+//# sourceMappingURL=script.js.map
