@@ -2,10 +2,10 @@
 // import {style} from 
 
 
-document.querySelector(".button")?.addEventListener('click', function togliOpacita(){
-   let row : HTMLElement | null=  document.querySelector(".row");
-row?.style.opacity = '1'
-})
+// document.querySelector(".button")?.addEventListener('click', function togliOpacita(){
+//    let row : HTMLElement | null=  document.querySelector(".row");
+// row?.style.opacity = '1'
+// })
 
 
 interface ISmartphone{      //Qui ho costruito l'interfaccia 
@@ -174,13 +174,15 @@ let Mario = new FirstUser(20, 5, 0.20, 30, 4);
 Mario.ricarica(30)
 
 document.getElementById('ricaricaEffettuata')?.addEventListener('click', function mostraRicarica(){
-    alert("Hai effettuato una ricarica di " + Mario.unaRicarica + " euro ")
+ let domSiri:any =  document.querySelector("#Siri"); 
+    domSiri.append("Hai effettuato una ricarica di " + Mario.unaRicarica + " euro ")
 });
 
 console.log(Mario.carica)
 
 document.getElementById('creditoResiduo')?.addEventListener('click', function mostraCredito(){
-    alert("Il tuo credito residuo è di " + Mario.carica + " euro ")
+    let domSiri:any =  document.querySelector("#Siri"); 
+    domSiri.append("Il tuo credito residuo è di " + Mario.carica + " euro ")
 });
 
 
@@ -189,7 +191,8 @@ Mario.chiamata(2)
 console.log(Mario.carica)
 console.log(Mario.numeroChiamate)
 document.getElementById('chiamateEffettuate')?.addEventListener('click', function mostraChiamate(){
-    alert("Da questa mattina hai effettuato " + Mario.numeroChiamate + " chiamate")
+    let domSiri:any =  document.querySelector("#Siri");
+    domSiri.append("Da questa mattina hai effettuato " + Mario.numeroChiamate + " chiamate")
 });
 
 Mario.numero404()
@@ -206,8 +209,11 @@ console.log(Mario.numeroChiamate)
 // console.log(Mario.numeroChiamate)
 
 document.getElementById('ultimaChiamata')?.addEventListener('click', function mostraUltimaChiamata(){
-    alert("La durata della tua ultima chiamata è stata di " + Mario.minutiDurata + " minuti")
+    let domSiri:any =  document.querySelector("#Siri");
+    domSiri.append("La durata della tua ultima chiamata è stata di " + Mario.minutiDurata + " minuti")
 });
+
+
 
 
 
@@ -263,4 +269,6 @@ console.log(Francesco.numeroChiamate)
 Francesco.azzeraChiamate();
 
 console.log(Francesco.numeroChiamate)
+
+
 

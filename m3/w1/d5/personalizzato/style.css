@@ -163,10 +163,15 @@ body {
 
 #Siri {
 
+  text-align: center;
   font-size: 3rem;
   margin-top: 200px;
-  margin-left: 1150px;
+  
+  font-weight: bold;
+  cursor: pointer;
 }
+
+
 
 
 /* #chiama {
