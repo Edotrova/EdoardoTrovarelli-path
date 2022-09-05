@@ -1,4 +1,5 @@
 
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from './button/button.component';
 
@@ -48,16 +49,22 @@ callJson(){
   .then(res => this.photos = res)
 }
 
-bgColor:string = "blue";
-i:number = 0;
+like:any[] = []
 
-likePhoto(){
- 
-  if(this.bgColor == "blue"){
- this.bgColor = "green"} else {
-  this.bgColor = "blue";}
- this.i++;
- alert('Hai messo mi piace ' + this.i + ' volte')
+bgColor:string = "blue";
+
+
+likePhoto(photo:any, event:Event){
+console.log(event)
+  let index = this.like.findIndex(p => p === photo.id);
+ if(index == -1){  
+this.like.push(photo.id);
+if (event){(event.target as HTMLElement).style.backgroundColor = "green";}
+
+
+ } else {this.like.splice(index, 1);}  
+  console.log(this.like)
+
 }
 
 deletePhoto(id:string){

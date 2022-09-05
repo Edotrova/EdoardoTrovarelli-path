@@ -16,15 +16,17 @@
 <div *ngFor="let photo of photos" id="ElementoCompleto">  
   
 <div class="card col-4 mt-5 ms-5" style="width: 18rem;">
-  <img src="{{photo.thumbnailUrl}}" class="card-img-top" alt="...">
+  <img [src]="photo.thumbnailUrl" class="card-img-top" alt="...">
   <h5 class="card-title">{{photo.title}}</h5>
     <button [style.backgroundColor]="bgColor"
-      (click)="likePhoto()"
-      class="btn btn-danger text-dark">Mi piace</button>
+      (click)="likePhoto(photo, $event)" 
+       class="btn btn-danger text-dark">Mi piace</button>
       <button
       (click)="deletePhoto(photo.id)"
       class="btn btn-danger text-dark">Elimina</button>
     </div>
   </div>
 </div>   
+
+  <p>hai messo {{this.like.length}} like</p>
 
