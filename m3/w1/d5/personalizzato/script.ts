@@ -2,9 +2,10 @@
 // import {style} from 
 
 
-// document.querySelector(".button")!.addEventListener('click', function togliOpacita(){
-//     document.querySelector(".row")!.style.opacity = '5'
-// })
+document.querySelector(".button")?.addEventListener('click', function togliOpacita(){
+   let row : HTMLElement | null=  document.querySelector(".row");
+row?.style.opacity = '1'
+})
 
 
 interface ISmartphone{      //Qui ho costruito l'interfaccia 
