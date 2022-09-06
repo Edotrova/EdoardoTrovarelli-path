@@ -173,15 +173,20 @@ let Mario = new FirstUser(20, 5, 0.20, 30, 4);
 
 Mario.ricarica(30)
 
-document.getElementById('ricaricaEffettuata')?.addEventListener('click', function mostraRicarica(){
- let domSiri:any =  document.querySelector("#Siri"); 
-    domSiri.append("Hai effettuato una ricarica di " + Mario.unaRicarica + " euro ")
+
+document.getElementById('ricaricaEffettuata')?.addEventListener('click', function mostraRicarica(e){
+    let domSiri:any =  document.querySelector("#Siri");
+    creoSiri(domSiri.value);
+    domSiri.append("Il tuo credito residuo è di " + Mario.carica + " euro ")
 });
 
 console.log(Mario.carica)
 
-document.getElementById('creditoResiduo')?.addEventListener('click', function mostraCredito(){
-    let domSiri:any =  document.querySelector("#Siri"); 
+
+document.getElementById('creditoResiduo')?.addEventListener('click', function mostraCredito(e){
+    let domSiri:any =  document.querySelector("#Siri");
+    creoSiri(domSiri.value);
+    
     domSiri.append("Il tuo credito residuo è di " + Mario.carica + " euro ")
 });
 
@@ -190,10 +195,16 @@ Mario.chiamata(2)
 
 console.log(Mario.carica)
 console.log(Mario.numeroChiamate)
-document.getElementById('chiamateEffettuate')?.addEventListener('click', function mostraChiamate(){
+
+
+document.getElementById('chiamateEffettuate')?.addEventListener('click', function mostraUltimaChiamata(e){
     let domSiri:any =  document.querySelector("#Siri");
+    creoSiri(domSiri.value);
+    
     domSiri.append("Da questa mattina hai effettuato " + Mario.numeroChiamate + " chiamate")
 });
+
+    
 
 Mario.numero404()
 
@@ -208,12 +219,22 @@ console.log(Mario.numeroChiamate)
 
 // console.log(Mario.numeroChiamate)
 
-document.getElementById('ultimaChiamata')?.addEventListener('click', function mostraUltimaChiamata(){
+document.getElementById('ultimaChiamata')?.addEventListener('click', function mostraUltimaChiamata(e){
     let domSiri:any =  document.querySelector("#Siri");
+    creoSiri(domSiri.value);
+    
     domSiri.append("La durata della tua ultima chiamata è stata di " + Mario.minutiDurata + " minuti")
 });
 
 
+
+function creoSiri(domSiri:string){
+    let div = document.createElement('div');
+    
+    // if (div.innerHTML = '') {div.innerHTML = domSiri;} else { domSiri.removeAttribute("innerHTML")}
+    
+   
+}
 
 
 
