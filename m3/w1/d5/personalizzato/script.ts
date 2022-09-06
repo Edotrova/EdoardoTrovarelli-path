@@ -231,7 +231,8 @@ document.getElementById('ultimaChiamata')?.addEventListener('click', function mo
 function creoSiri(domSiri:string){
     let div = document.createElement('div');
     
-    // if (div.innerHTML = '') {div.innerHTML = domSiri;} else { domSiri.removeAttribute("innerHTML")}
+    if (div.innerHTML = '') {div.innerHTML = domSiri;} 
+    // else { domSiri.removeAttribute("innerHTML")}
     
    
 }

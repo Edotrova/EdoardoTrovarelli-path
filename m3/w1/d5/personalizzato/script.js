@@ -114,7 +114,10 @@ console.log(Mario.numeroChiamate);
 });
 function creoSiri(domSiri) {
     let div = document.createElement('div');
-    // if (div.innerHTML = '') {div.innerHTML = domSiri;} else { domSiri.removeAttribute("innerHTML")}
+    if (div.innerHTML = '') {
+        div.innerHTML = domSiri;
+    }
+    // else { domSiri.removeAttribute("innerHTML")}
 }
 //Laura è l'istanza della classe SecondUser
 let Laura = new FirstUser(10, 5, 0.20, 20, 4);
