@@ -82,24 +82,36 @@ class ThirdUser {
 //Mario è l'istanza della classe FirstUser
 let Mario = new FirstUser(20, 5, 0.20, 30, 4);
 Mario.ricarica(30);
-(_a = document.getElementById('ricaricaEffettuata')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function mostraRicarica(e) {
+(_a = document.getElementById('ricaricaEffettuata')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function mostraUltimaChiamata(e) {
     let domSiri = document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    domSiri.append("Il tuo credito residuo è di " + Mario.carica + " euro ");
+    let div = document.createElement("div");
+    div.innerHTML = "Il tuo credito è di " + Mario.carica + " euro ";
+    domSiri.append(div);
+    div.addEventListener("click", function () {
+        div.remove();
+    });
 });
 console.log(Mario.carica);
-(_b = document.getElementById('creditoResiduo')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', function mostraCredito(e) {
+(_b = document.getElementById('creditoResiduo')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', function mostraUltimaChiamata(e) {
     let domSiri = document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    domSiri.append("Il tuo credito residuo è di " + Mario.carica + " euro ");
+    let div = document.createElement("div");
+    div.innerHTML = "Il tuo credito residuo è di " + Mario.carica + " euro ";
+    domSiri.append(div);
+    div.addEventListener("click", function () {
+        div.remove();
+    });
 });
 Mario.chiamata(2);
 console.log(Mario.carica);
 console.log(Mario.numeroChiamate);
 (_c = document.getElementById('chiamateEffettuate')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', function mostraUltimaChiamata(e) {
     let domSiri = document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    domSiri.append("Da questa mattina hai effettuato " + Mario.numeroChiamate + " chiamate");
+    let div = document.createElement("div");
+    div.innerHTML = "Da questa mattina hai effettuato " + Mario.numeroChiamate + " chiamate";
+    domSiri.append(div);
+    div.addEventListener("click", function () {
+        div.remove();
+    });
 });
 Mario.numero404();
 console.log(Mario.carica);
@@ -109,17 +121,13 @@ console.log(Mario.numeroChiamate);
 // console.log(Mario.numeroChiamate)
 (_d = document.getElementById('ultimaChiamata')) === null || _d === void 0 ? void 0 : _d.addEventListener('click', function mostraUltimaChiamata(e) {
     let domSiri = document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    domSiri.append("La durata della tua ultima chiamata è stata di " + Mario.minutiDurata + " minuti");
+    let div = document.createElement("div");
+    div.innerHTML = "La durata della tua ultima chiamata è stata di " + Mario.minutiDurata + " minuti";
+    domSiri.append(div);
+    div.addEventListener("click", function () {
+        div.remove();
+    });
 });
-function creoSiri(domSiri) {
-    let div = document.createElement('div');
-    div.innerHTML = domSiri;
-}
-// function eliminaSiri(domSiri:string){
-//     let eliminaSiri:any = document.querySelector('#Siri')
-//     eliminaSiri.innerHTML = ''
-// }
 //Laura è l'istanza della classe SecondUser
 let Laura = new FirstUser(10, 5, 0.20, 20, 4);
 Laura.ricarica(20);

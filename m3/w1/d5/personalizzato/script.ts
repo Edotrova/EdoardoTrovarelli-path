@@ -173,22 +173,29 @@ let Mario = new FirstUser(20, 5, 0.20, 30, 4);
 
 Mario.ricarica(30)
 
-
-document.getElementById('ricaricaEffettuata')?.addEventListener('click', function mostraRicarica(e){
+document.getElementById('ricaricaEffettuata')?.addEventListener('click', function mostraUltimaChiamata(e){
     let domSiri:any =  document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    domSiri.append("Il tuo credito residuo è di " + Mario.carica + " euro ")
-});
+    let div = document.createElement("div");
+    div.innerHTML = "Il tuo credito è di " + Mario.carica + " euro "
+    domSiri.append(div)
+    div.addEventListener("click", function (){
+        div.remove();
+    })
+})
+
 
 console.log(Mario.carica)
 
-
-document.getElementById('creditoResiduo')?.addEventListener('click', function mostraCredito(e){
+document.getElementById('creditoResiduo')?.addEventListener('click', function mostraUltimaChiamata(e){
     let domSiri:any =  document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    
-    domSiri.append("Il tuo credito residuo è di " + Mario.carica + " euro ")
-});
+    let div = document.createElement("div");
+    div.innerHTML = "Il tuo credito residuo è di " + Mario.carica + " euro "
+    domSiri.append(div)
+    div.addEventListener("click", function (){
+        div.remove();
+    })
+})
+
 
 
 Mario.chiamata(2)
@@ -199,10 +206,14 @@ console.log(Mario.numeroChiamate)
 
 document.getElementById('chiamateEffettuate')?.addEventListener('click', function mostraUltimaChiamata(e){
     let domSiri:any =  document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    
-    domSiri.append("Da questa mattina hai effettuato " + Mario.numeroChiamate + " chiamate")
-});
+    let div = document.createElement("div");
+    div.innerHTML = "Da questa mattina hai effettuato " + Mario.numeroChiamate + " chiamate"
+    domSiri.append(div)
+    div.addEventListener("click", function (){
+        div.remove();
+    })
+})
+
 
     
 
@@ -221,23 +232,15 @@ console.log(Mario.numeroChiamate)
 
 document.getElementById('ultimaChiamata')?.addEventListener('click', function mostraUltimaChiamata(e){
     let domSiri:any =  document.querySelector("#Siri");
-    creoSiri(domSiri.value);
-    
-    domSiri.append("La durata della tua ultima chiamata è stata di " + Mario.minutiDurata + " minuti")
-});
+    let div = document.createElement("div");
+    div.innerHTML = "La durata della tua ultima chiamata è stata di " + Mario.minutiDurata + " minuti"
+    domSiri.append(div)
+    div.addEventListener("click", function (){
+        div.remove();
+    })
+})
 
 
-
-function creoSiri(domSiri:string){
-    let div = document.createElement('div');
-    div.innerHTML = domSiri;
-    
-}
-
-// function eliminaSiri(domSiri:string){
-//     let eliminaSiri:any = document.querySelector('#Siri')
-//     eliminaSiri.innerHTML = ''
-// }
 
 
 
