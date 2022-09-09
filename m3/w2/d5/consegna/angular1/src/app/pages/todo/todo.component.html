@@ -1,0 +1,8 @@
+<div *ngIf="todos.length == 0">Loading...</div>
+<ng-container *ngFor="let todo of todos">
+   
+    <div>
+        <p>{{todo.content}}</p>
+    </div>
+
+</ng-container>
