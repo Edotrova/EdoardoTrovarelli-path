@@ -1,6 +1,39 @@
 {
-  "todo": [
-    {"id":1,
-    "content": "fai la spesa"}
+  "todos": [
+    {
+      "content": "fai la spesa",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "content": "mangia la pizza",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "content": "fai la barba",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "content": "Prepara la torta",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "content": "Lava la macchina",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "content": "Porta il cane a spasso",
+      "completed": true,
+      "id": 8
+    },
+    {
+      "content": "mangia la pasta",
+      "completed": false,
+      "id": 9
+    }
   ]
 }

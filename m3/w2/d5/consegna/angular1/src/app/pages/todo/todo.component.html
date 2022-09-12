@@ -1,8 +1,31 @@
-<div *ngIf="todos.length == 0">Loading...</div>
+
+<div class="container">
+
+    <form id="form">
+
+        <h2 id="titolo2">Cose da fare</h2>
+
+<textarea [(ngModel)]="newTodo.content"  name="textarea" placeholder="Cosa devi fare?" id="" cols="30" rows="3" ></textarea><br>
+<button id="aggiungi" class="btn" (click)="adding()">Aggiungi</button>
+
+
+    </form>
+
+</div>
+
+
+
+<div id="loading" *ngIf="todos.length == 0">Loading...</div>
 <ng-container *ngFor="let todo of todos">
    
-    <div>
-        <p>{{todo.content}}</p>
+    <div id="cosaDaFare">
+    <input class="elementiLista" (click)="reverseBoolean(todo)"  type="checkbox" name="cosaDaFare">{{todo.content}}
+    <div id="buttonCouple">
+    <button (click)="update(todo,todo.id)" class="btn" id="modifica">modifica</button>
+    <button (click)="deleted(todo.id)" class="btn" id="elimina">Elimina</button>
+    </div>
+
     </div>
 
 </ng-container>
+

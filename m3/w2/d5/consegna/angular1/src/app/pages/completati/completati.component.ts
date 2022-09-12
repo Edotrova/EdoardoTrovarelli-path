@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/app/todo';
+import { TodoService } from 'src/app/todo.service';
 
 @Component({
   selector: 'app-completati',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompletatiComponent implements OnInit {
 
-  constructor() { }
+  todos: Todo[] = [];
+  newTodo:Todo = new Todo('', false)
+
+  constructor(private todoSvc: TodoService) { }
 
   ngOnInit(): void {
-  }
 
-}
+    this.todoSvc.getAllTodos()
+    .then(res => {
+      this.todos = res.filter(todo => todo.completed === true)
+    })
+      
+    }
+  }
+ 
+
+  
+
+  
+
+
