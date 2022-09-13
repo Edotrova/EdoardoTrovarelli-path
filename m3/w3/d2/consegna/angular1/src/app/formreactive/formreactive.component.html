@@ -3,45 +3,45 @@
       <form [formGroup]="form" class="col" (ngSubmit)="submit(form)" #form="ngForm">
         <div class="form-group">
           <label for="name">Name</label>
-          <input formControlName="name" #u="ngModel"
+          <input formControlName="name" 
            type="text" required id="name"
-           class="form-control" ngModel name="name">
-          <p class="errorText" *ngIf="checkValidity(u)">Devi riempire il campo Nome</p>
+           class="form-control"  name="name">
+          <p class="errorText" *ngIf="checkValidity()">Devi riempire il campo Nome</p>
         </div>
         <div class="form-group">
           <label for="alterEgo">AlterEgo</label>
-          <input formControlName="alterEgo" #e="ngModel" required
-          type="text" id="alterEgo" class="form-control" ngModel name="alterEgo">
-          <p class="errorText" *ngIf="checkValidity(e)">Devi riempire il campo AlterEgo</p>
+          <input formControlName="alterEgo" required
+          type="text" id="alterEgo" class="form-control"  name="alterEgo">
+          <p class="errorText" *ngIf="checkValidity()">Devi riempire il campo AlterEgo</p>
         </div>
         <div class="form-group">
           <label for="power">Power:</label>
-          <select formControlName="power" #p="ngModel" type="text" id="power" class="form-control" ngModel name="power">
+          <select formControlName="power" type="text" id="power" class="form-control"  name="power">
             <option value="">Non specificato</option>
             <option value="">Strenght</option>
             <option value="">Speed</option>
             <option value="">Invisibility</option>
             <option value="">Elasticbody</option>
           </select>
-          <p class="errorText" *ngIf="checkValidity(p)">Devi riempire il campo Power</p>
+          <p class="errorText" *ngIf="checkValidity()">Devi riempire il campo Power</p>
         </div>
         <div class="form-group">
           <label for="enemy">Enemy</label>
-          <input formControlName="enemy" #n="ngModel" required
-          type="text" id="enemy" class="form-control" ngModel name="enemy">
-          <p class="errorText" *ngIf="checkValidity(n)">Devi riempire il campo Enemy</p>
+          <input formControlName="enemy" required
+          type="text" id="enemy" class="form-control"  name="enemy">
+          <p class="errorText" *ngIf="checkValidity()">Devi riempire il campo Enemy</p>
         </div>
         <div class="form-group">
           <label for="planet">Planet</label>
-          <input formControlName="planet" #z="ngModel" required
-          type="text" id="planet" class="form-control" ngModel name="planet">
-          <p class="errorText" *ngIf="checkValidity(z)">Devi riempire il campo Planet</p>
+          <input formControlName="planet" required
+          type="text" id="planet" class="form-control" name="planet">
+          <p class="errorText" *ngIf="checkValidity()">Devi riempire il campo Planet</p>
   
         </div>
         <div class="form-group">
           <label for="weakness">Weakness</label>
-          <input #e="ngModel" required
-          type="text" id="weakness" class="form-control" ngModel name="weakness">
+          <input  required
+          type="text" id="weakness" class="form-control" name="weakness">
         </div>
         <button [disabled]="form.invalid" class="btn btn-primary">Invia</button>
       </form>

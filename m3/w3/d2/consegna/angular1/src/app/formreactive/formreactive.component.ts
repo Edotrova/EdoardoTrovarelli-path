@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormArray, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
-
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { NgModel } from '@angular/forms';
 @Component({
   selector: 'app-formreactive',
   templateUrl: './formreactive.component.html',
@@ -34,6 +34,16 @@ export class FormreactiveComponent implements OnInit {
 
       })
   }
+
+  getControl(x: string){
+    return this.form.get(x)
+  }
+
+  checkValidity(x:string){
+    return this.getControl(x)?.invalid && this.getControl(x)?.touched &&  this.getControl(x)?.dirty
+  }
+
+
   submit(){
     
     console.log(this.form.value)
