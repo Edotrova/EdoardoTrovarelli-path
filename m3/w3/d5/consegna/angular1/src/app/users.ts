@@ -5,11 +5,15 @@ export class Users {
     surname?:string ;
     date?:Date ;
     email:string;
-    password?:string | undefined;
-    constructor(  email:string, password:string | undefined) {
-       
-        this.email = email;
+    password?:string;
+    role:string;
+    constructor(name:string, surname:string, date:Date,  email:string, password:string , role:string) {
+       this.name = name
+       this.surname = surname
+       this.date = date
+        this.email = email
     this.password = password
+    this.role = 'user'
 
     }
 }

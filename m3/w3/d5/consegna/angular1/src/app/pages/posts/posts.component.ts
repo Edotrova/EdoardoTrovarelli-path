@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Posts } from 'src/app/posts';
 import { PostsService } from 'src/app/posts.service';
 import { UsersService } from 'src/app/users.service';
@@ -16,7 +17,7 @@ export class PostsComponent implements OnInit {
   formAction: string | undefined;
   
 
-  constructor(private postsSvc:PostsService) { }
+  constructor(private postsSvc:PostsService, private router: Router) { }
 
   ngOnInit(): void {
     this.postsSvc.getAllPosts().subscribe(posts => this.posts = posts)
@@ -46,5 +47,7 @@ export class PostsComponent implements OnInit {
     })
   }
 
+  GotoEdit(){
+    this.router.navigate(['/editposts']);}
 
 }

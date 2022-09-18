@@ -4,27 +4,28 @@
 <h1>Create your Profile</h1>
 </div>
 
+<form [formGroup]="form">
    
 <div class="container">
     <div id="threediv">
 <div  nz-row [nzGutter]="[16, 24]">
     
     <div id="primo" nz-col class="gutter-row" [nzSpan]="8"><div class="inner-box">
-    <input [(ngModel)]="user.name" type="text" placeholder="Insert your name" name="name">
+    <input formControlName="name" type="text" placeholder="Insert your name" name="name">
 </div></div>
 <div nz-col class="gutter-row" [nzSpan]="8"><div class="inner-box">
-    <input [(ngModel)]="user.surname" type="text" placeholder="Insert your surname" name="surname">
+    <input formControlName="surname"  type="text" placeholder="Insert your surname" name="surname">
 </div></div>
 <div nz-col class="gutter-row" [nzSpan]="8"><div class="inner-box">
-    <input [(ngModel)]="user.date" id="date" type="date" placeholder="Insert your date" name="date">
+    <input formControlName="date"  id="date" type="date" placeholder="Insert your date" name="date">
 </div></div>
 
 <div  nz-col class="gutter-row" [nzSpan]="8"><div class="inner-box">
-    <input [(ngModel)]="user.email" type="email" placeholder="Insert your email" name="email">
+    <input  formControlName="email" type="email" placeholder="Insert your email" name="email">
 </div></div>
 
 <div nz-col class="gutter-row" [nzSpan]="8"><div class="inner-box">
-    <input [(ngModel)]="user.password" type="password" placeholder="Create a new password">
+    <input formControlName="password" type="password" placeholder="Create a new password">
 </div></div>
 <div nz-col class="gutter-row" [nzSpan]="8"><div class="inner-box">
     <input type="password" placeholder="Confirm your password">
@@ -32,15 +33,15 @@
 </div>
 </div>
 <div id="create">
-<a (click)="saveUser()"  nz-button nzType="primary">Click here to Create Profile</a>
+<a (click)="submit()"  nz-button nzType="primary">Click here to Create Profile</a>
 </div>
 <div class="button">
     <button (click)="BackToLogin()" id="edit" nz-button nzType="primary">Back to Login</button>
-    <button (click)="GoToProfile()" id="delete" nz-button nzType="secondary">Go to Profile</button>
+    
   </div>
 
 
 </div>
 
-
+</form>
 

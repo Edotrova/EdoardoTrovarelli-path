@@ -1,10 +1,16 @@
 {
   "posts": [
     {
-      "title": "cucinare la pasta",
-      "content": "Per cucinare la pasta devi fare un po' di cose",
-      "author": "edoardo",
-      "id": 1
+      "title": "fare la torta",
+      "content": "Fare la torta è difficile",
+      "author": "Giulia",
+      "id": 3
+    },
+    {
+      "title": "Viva il mare",
+      "content": "Il mare è meglio della montagna",
+      "author": "Carlo",
+      "id": 5
     }
   ],
   "users": [
@@ -17,12 +23,79 @@
       "id": 1
     },
     {
-      "email": "filippo.filippo@filippo.it",
-      "password": "$2a$10$c3BItW.Yf72b8hyBoFAK1e9PosTQHXoP.znLA2jsuAm/XkyJwwMWy",
-      "name": "filippo",
-      "surname": "trovarelli",
-      "date": "2022-09-02",
-      "id": 2
+      "email": "giulia@giulia.it",
+      "password": "$2a$10$RfUIU0ged53xUfeZCkx0sOcgzgzEhqBjo2B12OIRXS09KnZ3lX6Oa",
+      "name": "giulia",
+      "surname": "chittaro",
+      "date": "2022-09-07",
+      "id": 3
+    },
+    {
+      "email": "alessandro@gmail.it",
+      "password": "$2a$10$0FhRsDCLi1NdClDD6ssTceJ7vt002/ZbOlay758NU0jnZKRuCIMBm",
+      "name": "Alessandro",
+      "surname": "Crescimanni",
+      "date": "2022-08-30",
+      "id": 4
+    },
+    {
+      "email": "luca@luca.com",
+      "password": "$2a$10$bdrNLv2Svsy5EejyAO3/HeHShvGm8DmTJepNlAags378f62nGPP7i",
+      "name": "luca",
+      "surname": "verdi",
+      "date": "2022-09-08",
+      "id": 5
+    },
+    {
+      "email": "luca@gmail.com",
+      "password": "$2a$10$ef9waTEXuFhCVC/SI7aojulb3W.7ejOfYGeMvZAQxvSPtZPGTE4du",
+      "name": "luca",
+      "surname": "neri",
+      "date": "2022-08-31",
+      "id": 6
+    },
+    {
+      "email": "alessio@gmail.com",
+      "password": "$2a$10$gESYvETsENZr1iTZK9iEQOvDfaOAPWcAm9xdxLvUpIOJ6blVORoUW",
+      "name": "Alessio",
+      "surname": "Rossi",
+      "date": "2022-09-07",
+      "id": 9
+    },
+    {
+      "email": "r@gmail.com",
+      "password": "$2a$10$47GDQjm6TCE6/ancAUkuauK.h6enC4r/nws.fqE75uK35buX7fw/m",
+      "name": "r",
+      "surname": "r",
+      "date": "2022-09-14",
+      "id": 10
+    },
+    {
+      "email": "anto@gmail.com",
+      "password": "$2a$10$j13GcDDpoAHR.5u8Rk91yubw57pwWssJU0TUj1ZwULp2E3RfBMj9.",
+      "name": "anto",
+      "surname": "anto",
+      "date": "2022-09-10",
+      "role": "user",
+      "id": 11
+    },
+    {
+      "email": "matteo@gmail.it",
+      "password": "$2a$10$Kyc4mDLtFiZEDDaS3OHqauatxNLNBt.96QmVW5G6nSZQDq9JQEtyW",
+      "name": "Matteo",
+      "surname": "Bianchi",
+      "date": "2022-09-08",
+      "role": "user",
+      "id": 12
+    },
+    {
+      "email": "Carlo@gmail.com",
+      "password": "$2a$10$5R1chfDviXf5KdW5GGkulOIvRkwk4lAfscVJj8H9ssTyLSiOd8rky",
+      "name": "Carlo ",
+      "surname": "Verdone",
+      "date": "2022-09-08",
+      "role": "user",
+      "id": 13
     }
   ]
 }

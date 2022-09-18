@@ -9,7 +9,7 @@ import { UsersService } from 'src/app/users.service';
 })
 export class UsersComponent implements OnInit {
 
-  user: Users = new Users('','');
+  user: Users = new Users('','',new Date,'','','user');
   users:Users [] = [];
   formAction: string | undefined;
 
@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
   saveUser(){
     this.usersSvc.addUsers(this.user).subscribe(res => {
       this.users.push(res)
-      this.user = new Users('','')
+      this.user = new Users('','',new Date,'','','user')
     })
   }
 

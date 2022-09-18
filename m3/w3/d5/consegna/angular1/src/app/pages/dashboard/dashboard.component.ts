@@ -21,7 +21,16 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/formpost']);
   }
 
+
+GotoYourProfile(){
+  this.router.navigate(['/users']);
 }
 
-export class NzDemoLayoutTopComponent {}
+
+logout(){
+  this.router.navigate(['/']);
+}
+}
+
+
 
