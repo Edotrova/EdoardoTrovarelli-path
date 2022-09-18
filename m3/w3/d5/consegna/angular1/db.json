@@ -1,0 +1,13 @@
+{
+  "posts": [],
+  "users": [
+    {
+      "email": "edoardo@edoardo.it",
+      "password": "$2a$10$/nGkWv/dIjIn8p/h8Y9WSuS1FN7s4IvN1yMZ2aRIz1issClHiMM6a",
+      "name": "Edoardo",
+      "surname": "Trovarelli",
+      "date": "2022-09-07",
+      "id": 1
+    }
+  ]
+}

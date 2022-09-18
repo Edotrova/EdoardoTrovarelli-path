@@ -1,0 +1,24 @@
+<nz-layout class="layout">
+    <nz-header>
+      <div class="logo"></div>
+      
+    </nz-header>
+    <nz-content>
+      <nz-breadcrumb>
+        <nz-breadcrumb-item [routerLink]="['/dashboard']">Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item [routerLink]="['/users']" >Profile</nz-breadcrumb-item>
+        <nz-breadcrumb-item [routerLink]="['/posts']" >Posts</nz-breadcrumb-item>
+      </nz-breadcrumb>
+
+      <div *ngFor="let user of users" id="card" style="background: #ECECEC;padding:50px;">
+        <h2>{{user.name}}+{{user.surname}}</h2>
+          <p>{{user.date}}</p>
+          <p>{{user.email}}</p>
+          <div class="button">
+            <button id="edit" nz-button nzType="primary">Modifica</button>
+            <button id="delete" nz-button nzType="secondary">Elimina</button>
+          </div>
+      </div>
+      <ng-template #extraTemplate>
+       
+      </ng-template>

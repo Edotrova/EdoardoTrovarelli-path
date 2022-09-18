@@ -1,0 +1,61 @@
+.container {
+    margin-top: 7rem;
+    padding: 8rem;
+    
+    border: 3px solid #001529;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #001529;
+    padding-top: 3.5rem;
+}
+
+
+div{
+  
+    font-size: 1.4rem;
+}
+
+#threediv {
+margin-left: 115px;
+}
+
+#date {
+    width: 262px;
+}
+
+[nz-button] {
+    margin-right: 12px;
+    
+    
+  }
+
+  .button {
+    margin-top: 4rem;
+    text-align: center;
+    
+  }
+
+#edit, #delete {
+    background-color:#001529 ;
+   color: white;
+   padding: 0.7rem;
+   cursor: pointer;
+  }
+
+  a{
+    color:#001529 ;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  #create {
+    margin-top: 4rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+  

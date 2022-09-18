@@ -1,0 +1,23 @@
+<nz-layout class="layout">
+    <nz-header>
+      <div class="logo"></div>
+      
+    </nz-header>
+    
+    <nz-content>
+      <nz-breadcrumb>
+        <nz-breadcrumb-item [routerLink]="['/dashboard']">Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item [routerLink]="['/users']" >Profile</nz-breadcrumb-item>
+        <nz-breadcrumb-item [routerLink]="['/posts']" >Posts</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div class="inner-content">
+        <h1>Welcome back, Edoardo</h1>  
+        <p id="news">Check for news</p>
+        <div id="twobuttons">
+        <button id="edit" nz-button nzType="primary">Create a new Post</button>
+        <button id="delete" nz-button nzType="secondary">Go to your profile</button>
+      </div>
+      </div> 
+    </nz-content>
+    <nz-footer>Ant Design ©2022 Implement By Edward Inc.</nz-footer>
+  </nz-layout>

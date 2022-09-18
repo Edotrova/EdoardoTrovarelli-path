@@ -1,0 +1,71 @@
+.logo {
+  width: 15%;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+
+
+nz-breadcrumb {
+  margin: 36px 0;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+
+nz-content {
+  padding: 0 50px;
+  
+}
+
+nz-footer {
+  text-align: center;
+}
+
+.inner-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+}
+
+  #card {
+
+    margin: 8rem auto;
+    width: 30%;
+    
+      }
+    
+      nz-card {
+        width: 100%;
+        height: auto;
+        font-size: 1.5rem;
+        color: #001529;
+      }
+    
+     h2{
+    font-size: 2rem;
+    color: #001529;
+    margin-bottom: 3.5rem;
+      }
+    
+      [nz-button] {
+        margin-right: 12px;
+        
+        
+      }
+
+      .button {
+        margin-top: 3rem;
+        text-align: center;
+        
+      }
+
+      #edit, #delete {
+        background-color:#001529 ;
+       color: white;
+       padding: 0.7rem;
+       cursor: pointer;
+      }
+      
