@@ -11,9 +11,9 @@
       </nz-breadcrumb>
 
       <div *ngFor="let user of users" id="card" style="background: #ECECEC;padding:50px;">
-        <h2>{{user.name}}+{{user.surname}}</h2>
-          <p>{{user.date}}</p>
-          <p>{{user.email}}</p>
+        <h2>{{user.name}}{{user.surname}}</h2>
+          <p>Nato il: {{user.date}}</p>
+          <p>Indirizzo: {{user.email}}</p>
           <div class="button">
             <button id="edit" nz-button nzType="primary">Modifica</button>
             <button id="delete" nz-button nzType="secondary">Elimina</button>

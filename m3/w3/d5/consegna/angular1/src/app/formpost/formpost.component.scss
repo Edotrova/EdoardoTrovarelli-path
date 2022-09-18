@@ -1,0 +1,62 @@
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+input, textarea {
+    font-size: 1.5rem;
+    
+    margin: 1rem 6rem;
+    padding: 1rem;
+}
+
+#primo {
+    margin-top: 5rem;
+}
+
+input {
+    height: 30px;
+}
+
+textarea{
+    height:250px;
+width: 70%;
+}
+
+.container{
+    border: 3px solid black;
+    margin: 5rem 15rem;
+}
+
+a{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: underline;
+    color: #001529;
+    
+}
+
+#quarto {
+    margin-top: 6rem;
+}
+.button {
+    margin-top: 4rem;
+    text-align: center;
+    
+  }
+
+ #back {
+    background-color:#001529 ;
+   color: white;
+   padding: 1rem;
+   cursor: pointer;
+   margin-bottom: 3rem;
+  }
+  [nz-button] {
+    margin-right: 12px;
+    
+    
+  }

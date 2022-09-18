@@ -1,0 +1,35 @@
+<div id="CreatePost">
+  <h1>Create your Post</h1>
+</div>
+
+<div class="container">
+  <div nz-row [nzGutter]="[16, 24]">
+
+
+    <div id="primo" nz-col class="gutter-row" [nzSpan]="24">
+      <div class="inner-box">
+        <input [(ngModel)]="post.title" type="text" placeholder="Post Title">
+      </div>
+    </div>
+    <div id="secondo" nz-col class="gutter-row" [nzSpan]="24">
+      <div class="inner-box">
+        <input [(ngModel)]="post.author" type="text" placeholder="Post Author">
+      </div>
+    </div>
+    <div id="terzo" nz-col class="gutter-row" [nzSpan]="17">
+      <div class="inner-box">
+        <textarea [(ngModel)]="post.content" id="postcontent" placeholder="Post Content...">
+        </textarea>
+      </div>
+    </div>
+    <div id="quarto" nz-col class="gutter-row" [nzSpan]="7">
+      <a  (click)="savePost()" nz-button nzType="primary">Click here to Create a Post</a>
+    </div>
+  </div>
+  <div class="button">
+    <button (click)="Back()" id="back" nz-button nzType="primary">Back to Home</button>
+   
+  </div>
+
+
+</div>

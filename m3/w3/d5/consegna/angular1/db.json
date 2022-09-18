@@ -1,5 +1,12 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "cucinare la pasta",
+      "content": "Per cucinare la pasta devi fare un po' di cose",
+      "author": "edoardo",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "email": "edoardo@edoardo.it",
@@ -8,6 +15,14 @@
       "surname": "Trovarelli",
       "date": "2022-09-07",
       "id": 1
+    },
+    {
+      "email": "filippo.filippo@filippo.it",
+      "password": "$2a$10$c3BItW.Yf72b8hyBoFAK1e9PosTQHXoP.znLA2jsuAm/XkyJwwMWy",
+      "name": "filippo",
+      "surname": "trovarelli",
+      "date": "2022-09-02",
+      "id": 2
     }
   ]
 }
