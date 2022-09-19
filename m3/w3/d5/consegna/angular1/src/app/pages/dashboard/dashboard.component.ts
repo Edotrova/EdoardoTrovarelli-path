@@ -27,7 +27,8 @@ GotoYourProfile(){
 }
 
 
-logout(){
+logOut(){
+  localStorage.removeItem('access')
   this.router.navigate(['/']);
 }
 }
