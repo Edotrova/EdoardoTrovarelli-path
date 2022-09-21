@@ -96,6 +96,24 @@
       "date": "2022-09-08",
       "role": "user",
       "id": 13
+    },
+    {
+      "email": "acu@gmail.com",
+      "password": "$2a$10$0DqeBYfO947YQi50y.sDkOd84mQlJiVXxROq1KlcULl8sPv5yziE2",
+      "name": "luca",
+      "surname": "blu",
+      "date": "2022-09-07",
+      "role": "user",
+      "id": 14
+    },
+    {
+      "email": "giacomo@gmail.com",
+      "password": "$2a$10$ID.GYqOdhlGN5MB3nRjRyu2o87LLSX2AI5XZ3x6tEskx7h/v.s8Rq",
+      "name": "giacomo",
+      "surname": "rosari",
+      "date": "2022-09-15",
+      "role": "user",
+      "id": 15
     }
   ]
 }
