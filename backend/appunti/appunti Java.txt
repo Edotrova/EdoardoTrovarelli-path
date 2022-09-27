@@ -1,0 +1,80 @@
+Java Giorno 2 
+
+Il modelllo orientato agli oggetti si chiama paradgma che è una mentalità implementata da C++ e poi riprodotta da altri. Il suo antecedente era il paradigma procedurale e prima ancora il monolitico, che aveva un main generale nel quale veiva svolto tutto. 
+Quando  un metodo è static necessita un'istanza per essere scatenato.
+Le variabili private sono visibili solo all'interno della classe stessa.
+
+
+
+public class Giorno2 [
+
+	public static void main(String[] args) {
+
+//creazione istanza
+
+Student s1 = new Student();
+s1.name = "mario";
+s1.lastname = "rossi";
+s1.age = 25;
+s1.votes = new byte []{}
+s1.sayHello();
+
+System.outprintIn( this.name + " " + this.lastname);
+
+
+}
+
+
+}
+
+//classe
+
+class Student {
+
+String name;
+String lastname
+int age;
+int id;
+byte[] votes;
+
+//metodi
+
+void sayHello() 
+
+
+
+Per richiamare stato e metodi utilizzo il this. (possiamo evitare il this se non c'è concomitanza di nomi con le variabili).
+
+
+Che cos'è lo scopo?
+
+Lo scope è un contesto. Ad esempio se dico "sto facendo lezione in questa aula", questa aula è lo scope. Lo scope definisce, tra le altre cose, quanto tempo resta attiva una variabile. Ci sono scope di istanza(è quello delle variabili istanza, degli attributi), scope di metodo(è lo scope delle variabili locali del metodo) e scope di blocco(tutto quello che c'è tra due graffe come ad esempio quello di un if). 
+
+-full path e path relativa. Cosa sono?
+-differenza tra costruttore e costruttore implicito (il costruttore deve avere il nome della classe stessa e non ha il tipo di ritorno).
+
+
+-che cos'è un "riferimento" negli oggetti? 
+
+
+-vedere l'operatore dot. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
