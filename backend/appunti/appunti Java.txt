@@ -61,6 +61,13 @@ Lo scope è un contesto. Ad esempio se dico "sto facendo lezione in questa aula"
 
 
 
+tipi di modificatore di visibilità:
+
+-public
+-private
+-protected
+-package private
+
 
 
 
