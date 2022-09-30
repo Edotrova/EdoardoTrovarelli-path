@@ -1,0 +1,13 @@
+JAVA D3: ALGORITMI E STRUTTURE DI CONTROLLO
+
+-PACKAGE...
+
+Il package è uno strumento che serve a raggruppare le classi. La sua utilità sta nel fatto che un progetto Java può avere anche centinaia di classi ed attraverso il package esse possono essere raggruppate in modo ordinato in strutture gerarchiche. Ogni classe dichiara il porprio package di appartenenza e l'istruzione "import" consente di utilizzare classi provenienti da altri package all'interno delle porprie classi.
+
+
+Il package è l'unica cosa rilevante perchè il resto della giornata tre prevede in ordine:
+
+
+-if
+-switch
+-cicli (for, while e do while)

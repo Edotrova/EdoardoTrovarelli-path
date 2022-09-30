@@ -1,0 +1,67 @@
+D4
+
+La OOP introduce il concetto di information hiding. Il concetto esprime l'abilità di nascondere al mondo esterno tutti i dettagli implementativi più o meno complessi che si svolgono all'interno di un oggetto. Questo processo di mascheramento dei dettagli dell'implementazione di un oggetto si definisce incapsulamento.
+
+
+
+
+
+
+
+I MODIFICATORI DI VISIBILITA'sono uno dei possibili strumenti volti ad ottenere tale incapsulamento. Nello specifico distinguiamo tra classi di tipo:
+
+
+
+-public = i membri di una classe public o l'intera classe public sono accessibili da ogni classe utilizzata nell'applicazione;
+
+-private = i membri di una classe private possono essere utilizzati solo dai membri della stessa classe
+
+-nè public nè private = in questo caso sono definiti "package friendly"e saranno accessibili a tutte l classi dello stesso package.
+
+-protected = il modificatore protected permette di rendere accessibile un membro sia ad oggetti appartenenti allo stesso package della classe in cui è definito, analogamente al package friendly, sia ad oggetti in altri package, purchè essi siano estensioni della classe di riferimento;
+
+
+
+
+
+
+
+OVERLOADING DEI COSTRUTTORI:
+
+QUANDO SI UTILIZZA L'OPERATORE "NEW" per istanziare una classe attraverso il metodo costruttore, si passano al costruttore stesso, i parametri che rappresentano i dati necessari ad inizializzare correttamente l'oggetto. Un oggetto può essere istanziato in stati diversi, pertanto è possibile definire diversi costruttori che accettano parametri ed eseguono operazioni diverse. La scrittura di costruttori che accettano parametri diversi si definisce overloading di costruttori. Esiste poi una funzione chiamata "cross calling" che consente di invocare costruttori all'interno di altri costruttori.
+
+
+OVERLOADING DEI METODI:
+
+Allo stesso modo esistono in Java l'overloading dei metodi; cioè è possibile definire all'interno della stessa classe più metodi con lo stesso nome che accettano parametri diversi. Per far sì che l'overloading funzioni, è necessario che ogni elemento overloaded abbia una combinazione univoca di tipi di parametro: non è sufficiente che i parametri abbiano nomi diversi ma stessi tipi.
+
+
+
+
+ENUM
+
+L'ENUM è un "tipo speciale" che permette di definire un numero finito di valori fissati che possono essere assegnati alle variabili. Gli enum si definiscono con una sintassi analoga alle classi e presentano un eleenco di tutti i possibili valori che possono assumere.
+
+
+
+
+
+
+
+EREDITARIETA':
+
+Quando si impiega l'ereditarietà, si ricade in tre casistiche:
+
+-definizione di nuovi metodi (cioè nella sottoclasse si possono definire nuovi metodi, che non compaiono nella superclasse)
+
+-Overloading (nella sottoclasse si definiscono metodi che hanno lo stesso nome, ma parametri diversi rispetto a metodi della superclasse. L'overload non implica necessariamente ereditarietà ma può supportarla. Quando la sottoclasse possiede un metodo col lo stesso nome della superclasse ma con parametri diversi sarà possibile, nella sottoclasse, invocare enrambi i metodi in base ai parametri passati. In questo caso si dice che la sottoclasse "ha sovraccaricato" la sovraclasse )
+
+-Overriding (nella sottoclasse si definiscono metodi che hanno segnatura identica a quella della superclasse, mascherandoli completamente. In questo caso si dice che la sottoclasse "ridefinisce il metodo della superclasse".)
+
+-Super (il super, come in JS, serve a invocare i metodi della superclasse)
+
+-Final (la parola chiave final sta ad indicare che non può esistere una sottoclasse della classe in questione).
+
+-super() = il super con le tonde equivale al this() ma per i costruttori. In pratica puoi evocare esplicitamente il costruttore della superclasse.
+
+

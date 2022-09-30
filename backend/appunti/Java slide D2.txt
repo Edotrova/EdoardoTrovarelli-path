@@ -1,0 +1,48 @@
+JAVA SLIDE GIORNO 2: LE CLASSI IN JAVA
+
+Il concetto di oggetto:
+
+Qui è quasi tutto come in JS tranne alcune cose:
+A quanto pare in Java gli attributi di un oggetto sono solo ed esclusivamente variabili, mentre i metodi sono metodi. Le variabili presenti nelle classi vengono definite variabili di istanza. 
+
+Diversamente da altri linguaggi, in Java si può definire una variabile in vari punti del codice, pertanto è necessario introdurre delle regole affinchè le dichiarazioni in due punti diversi di una variabile con lo stesso nome non cri problemi. La visibilità di una variabile è definita dal cd. scope e può essere di tre tipi: Scope di istanza , Scope di metodo e Scope di blocco.
+
+
+public class VisibilitaDati {
+
+  private String attributo;                                           ----> questo è uno scope di istanza
+
+private void metodoSemplice() {                                       ----> questo è uno scope di metodo
+
+	int numeroElementi = 5;
+
+{
+
+double percentuale = 3.5                                              ----> scope di blocco
+
+}}}
+
+
+
+
+Tra i vari metodi che una classe può possedere, ne esiste uno particolare chiamato "metodo costruttore" il cui scopo è quello di indicare quali debbano essere gli argomenti da instanziare nell'oggetto. (il costruttore è come un timbro). Diversamente da JS, Java aggiunge automaticamente un costruttore definitto costruttore implicito che può essere invocato per creare un'istanza della classe; quest'ultimo viene meno alla dichiarazione del nuovo costruttore scritto volontariamente dal programmatore. Il NEW che serve a creare una nuova istanza funziona come in js. 
+
+
+
+
+-RIFERIMENTI...
+
+
+Un'altra cosa tipica di Java che non c'è in js sono i cd. "riferimenti". Che sono? I riferimenti sono dei puntatori che dicono "hey mi sto riferendo all'oggetto anche se non c'è scritto il suo nome" per esempio diamo come rifrimento 'a1' ad un oggetto automobile e lo utilizziamo al suo psoto. Il riferimento non è una copia dell'oggetto e non è il vero e proprio oggetto, solo un riferimento. 
+
+
+-OPERATORE 'DOT'
+
+E' un operatore utilizzato per accedere agli attributi ed ai metodi contenuti negli oggetti, permettendo ad istanze diverse di interagire tra loro
+
+
+-EQUALS, HASHCODE, TOSTRING
+
+Questi vanno capiti bene. Vedi questo.
+
+https://www.youtube.com/watch?v=N2EszxG-1qM

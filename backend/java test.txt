@@ -1,0 +1,64 @@
+
+
+class Elemento Multimediale () {
+
+String titolo;
+
+Int durata;
+
+play()
+
+
+}
+
+
+class Immagine () {
+
+show()
+
+}
+
+
+
+class Video () {
+
+int luminosità;
+
+aumentaLuminosita();
+
+diminuisciLuminosita();
+
+
+[L'ISTANZA DELLA CLASSE VIDEO DEVE ESSERE CICLATA NEL MAIN CON PUNTI ESCLAMATIVI IN SEQUENZA PER IL VOLUME ED UN CICLO CON UNA SEQUENZA DI ASTERISCHI PER LA LUMINOSITA']
+
+
+
+}
+
+
+
+
+class Registrazione Audio () {
+
+int volume;
+
+abbassaVolume();
+
+alzaVolume();
+
+[L'ISTANZA DELLA CLASSE AUDIO DEVE ESSERE CICLATA NEL MAIN]
+
+}
+
+
+
+
+class lettoreMultimediale() {
+
+
+
+}
+
+
+
+

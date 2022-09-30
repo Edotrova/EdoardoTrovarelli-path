@@ -1,0 +1,126 @@
+SLIDE GIORNO1
+
+
+-INTRODUZIONE A JAVA
+
+
+Java Develpment Kit = L'insieme dei programmi che consentono la compilazione di sorgenti e l'esecuzione di bytecode Java
+
+Java Virtual Machine = Termine che identifica un ambiente che consente di eseguire un programma Java
+
+Java Runtime Environment = L'insieme di programmi che consentono la sola esecuzione di bytecode di Java.
+
+Application = Applicazione stand alone scritta ijn Java ed è eseguita dalla Virtual Machine
+
+Servlet = Programma Java resaidente su un server invocato tramite indirizzo URL
+
+Bytecode = Il programma Java compilato. "Eseguibile", in realtà interpretato dalla Virtual Machine Java
+
+
+-PER SVILUPPARE IN JAVA..
+ 
+Sebbene siano sufficienti una "Java Development Kit" ed un Editor di Testo come VS Code, è consigliabile, per uno sviluppo efficacemente, avere un ambiente di sviluppo avanzato (IDE) come Eclipse o Intellij e dei Plug-In a supporto dell'IDE stesso. Nonostante dal 2019, per volontà di Oracle che ha acquisito Java nel 2010 circola una versione a pagamento della propria versione di JDK, è stata comunque predisposta anche una versione opensource chiamata OpenJDK e successivamente Temurin.
+
+
+-ECLIPSE...
+
+Cosa offre agli utilizzatori? Una scrittura assistita del codice e verifica della correttezza, strumenti per il debug in tempo reale, strumenti per analisi delle performance, strumenti per il packaging del codice e strumenti di collaborazione. 
+
+-COMPILATION UNIT...
+
+Questo è il nome del file sorgente Java ed è un file di testo che contiene alemno una definizione di classe. Ad ogni classe corrisponde un file di testo con estensione .java che deve avere lo stesso nome (facendo attenzione alla differenza tra minuscole e maiuscole) della classe che rappresenta. Quando il file sorgente viene compilato, ogni singola classe viene posta nel proprio file di output, che prenderà il nome della classe stessa, più l'estensione .class.
+
+-COMMENTI...
+
+I commenti (come in Javascript) su uan sola riga si fanno con il doppio slash //, mentre su più righe con /*.....*/.
+
+
+-IDENTIFICATORI...
+
+Gli identificatori hanno le loro regole sintattiche e sono di sei tipi:
+
+Classi (prima lettera maiuscola ed è un sostantivo es String, Color, Button)
+Interfacce (prima lettera maiuscola ed è un aggetivo : es. Runnable, Remote)
+Metodi (prima lettera minuscola seguita dalle tonde, come in JS)
+Variabili (lettera minuscola, eventualmente camelCase, es. firstName)
+Package (lettera minuscola)
+Costanti (tutta la parola è maiuscola)
+
+Oltre a queste indicazioni si deve ricordare che ci sono una serie di parole, cd. parole riservate, che non possono essere usate per nominare gli identificatori perchè hanno già un significato prorpio all'interno della sintassi Java, come in JS (es. abstract, boolean, byte)
+
+
+
+
+
+
+
+(qui ci sono i dati primitivi)
+
+
+Oltre agli identificatori, Java mette a disposizione del programmatori i cd. dati primitivi, le cui dimensioni in bytecode sono fisse:
+
+byte	8 bit	Variabile con segno (con rappresentazione "two's complement", complemento a due) e rappresenta valori in un range [-128 e 127] (estremi inclusi)	
+
+int	32 bit	Numeri interi (per default con segno, signed) in un range [-231, 231-1] . Con Java 8 è stata introdotta la possibilità di utilizzare gli int per rappresentare quantità unsigned che potranno avere range [0, 232-1] (grazie ad appositi metodi statici introdotti nelle classi Integer e Long)	
+
+long	64 bit	Numeri interi (per default con segno, signed) in un range [-263, 263-1]. Come per gli interi in Java 8 esiste la possibilità di utilizzarli come quantità unsigned con range (positivo) che arriva fino a 264-1.	
+
+float	32 bit	Numeri in virgola mobile in singola precisione secondo la specifica IEEE 754, utilizzando la rappresentazione segno, mantissa esponente.
+(-1)segno * mantissa * 2esponenteNella versione a 32bit il range rappresentabile va calcolato pensando ad un bit di segno, una mantissa a 23bit e un esponente a 8bit con valori compresi tra -126 e 127.Inoltre lo standard prevede la rappresentazione di due valori per zero (da destra e da sinistra) due per infinito (positivo e negativo), e di valori NaN (not a number) da utilizzare ad esempio come risultati di operazioni impossibili (es. divisioni per zero).	0.0f
+double	64 bit	Numeri in virgola mobile in doppia precisione secondo la specifica IEEE 754. La precisione con cui vengono rappresentati i numeri aumenta in virtù dell'aumento del numero di bit utilizzati.
+
+boolean	non specificato, ma sarebbe sufficiente un solo bit	serve a rappresentare solamente 2 valori: vero o falso (true o false).	false
+char	16 bit	È utilizzato per la memorizzazione di caratteri del charset Unicode) nel range ['\u0000', '\uffff'] (in esadecimale) o equivalentemente [0,65535].	
+Va aggiunto che ogni variabile di tipo oggetto (cioè di tipo non primitivo) viene per default inizializzata con il valore speciale null.
+
+Va notato che la stessa documentazione ufficiale di Java segnala che, benché i valori di default siano garantiti per tutti i field non inizializzati é da considerarsi una cattiva pratica quella di non inizializzare le variabili e quindi si dovrebbe cercare di evitarla.
+
+
+(qui finiscono i dati rimitivi)
+
+
+
+
+
+DIFFERENZE CON JS SUGLI ELEMENTI BASICI DELLA SINTASSI:
+
+
+-VARIABILE....
+
+Una variabile è una allocazione di memoria e valgono le stesse regole del JS. Ricordati solo che una variabile seguita dalla parola "final" si comporta come una costante
+
+-STRINGHE...
+
+Diversamente dal JS gode del metodo lenght per ritornare la lunghezza della stringa rappresentata (in js lo usavamo solo per gli array). NON ESISTONO I SINGOLI APICI 'pavesino'. Solo doppi "pavesino".
+
+-ARRAY
+
+Sono un tipo speciale ed aggregano un gruppo di variabili dello stesso tipo ed a differenza del JS possono essere multidimensionali.
+
+
+
+
+
+CONVERSIONE TRA TIPI:
+
+Java è un linguaggio fortemente tipizzato (come typescript) ed i controlli di compatibilità tra i tipi vengono effettuati al momento stesso della compilazione. Esistono due forme di conversioni tra tipi: Conversione implicita e Conversione esplicita. 
+
+
+OPERATORI:
+
+Gli operatori sono strumenti utilizzati per manipolare gli oggetti e possono essere di tre tipi: aritmetici (a loro volta divisibili in binari ed unari come il +, - ecc), relazionari (come il simbolo maggiore e minore < = > ) ed infine condizionali (&&, ||, !, ^)
+
+
+METODO MAIN
+
+Il metodo Main è un metodo speciale che permette alla virtual machine di eseguire l'applicazione; essonon ritorna mai nulla pertanto è SEMPRE void. Ad esso si accompagna il metodo "static" che può essere invocato senza aver inizializzato un oggetto. Dopo si mettono sempre "String [] args" perchè il metodo può ospitare dei parametri, i quali saranno sempre stringhe.
+
+
+SCANNER
+
+Che cazzo è lo scanner? Allora..
+Esiste in Java una interfaccia chiamata "console" che serve per interagire con l'utente. Lo scanner è uno strumento che permette di leggere stringhe di caratteri e le converte nel tipo di dato desiderato (poer esempio un int.).
+
+
+
+
