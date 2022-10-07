@@ -1,0 +1,31 @@
+COLLECTIONS E ANNOTATIONS:
+///////////////////////////////////////////////////////////////////////////////////è+ìììììììììììììììììì
+ANNOTATIONS:
+
+Le annotations sono dei metadati che è possibile aggiungere al codice sorgente per fornire al compilatore ed alla JVM delle informazioni su una parte del programma. Esse possono essere considerate come delle istruzioni aggiuntive utili ad automatizzare alcuni processi, effettuare controlli e scrivere codice più compatto e leggibile. Le annotations sono di vario tipo e possono essere collegate a classi, metodi e proprietà, in base al proprio scopo. Una annotation si compone generalemtne di due parti:
+
+-l'annotazione vera e propria, sempre presente.
+-i parametri dell'annotazione, che possono essere facoltativi.
+///////////////////////////////////////////////////////////////////////////////////
+
+COLLECTIONS:
+
+Le collections sono strutture che permettono di memorizzare, recuperare, manipolare e trasmettere dati aggregati. In Java, il fraemwork che permette di gestire le collection mette a disposizione:
+
+-interfacce: definizioni di interfacce che permettono di manipolare collezioni di oggetti indipendentemente dai dettagli implementativi
+
+-implementazioni: classi concrete che implementano le varie interfacce
+
+-algoritmi: funzionalità riusabili per eseguire operazioni comune
+
+
+Una collezione può essere ordinata o no e ammettere o meno elementi duplicati. L'interfaccia Collection, non specifica nessuno di questi aspetti ed infatti non ci sono classi che la implementano direttamente. Le sue sottointerfacce sono:
+
+.Set = non ammette ripetizione di elementi
+
+.List = l'utente può decidere l'ordine in cui inserire gli elementi, a cui può accedere usando l'indice della loro posizione.
+
+.Queque = prevede operazioni di inserimento, rimozione e ispezione degli eleemnti (due metodi per ciascuna, uno dei quali lancia l'operazione se fallisce l'operazione), l'ordinamento è tipicamente FIFO.
+
+L'interfaccia Map definisce una funzione da chiavi a valori. Ad una chiave è associato (al più) un valore. Non è una collezione in senso stretto. Si può vedere il contenuto della mappa come un insieme (Set) di chiavi, una collezione (collection) di valori, o un insieme (Set) di corrispondenze tra chiavi e valori. La sottointerfaccia SortedMap fornisce inoltre un ordine totale sulle chiavi. 
+

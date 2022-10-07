@@ -1,0 +1,38 @@
+
+Java fa uso delle cosidette "Exception Handling" per gestire efficacemente le condizioni di errore quando non è sufficiente l'utilizzo di approcci basati sugli strumenti di base, come i valori di ritorno dei metodi, il che è particolarmente evidente nella condizione in cui si genera un errore a partire dall'invocazione di un costruttore, dato che esso per definizione non ha un valore di ritorno.
+
+Un eccezione è un evento eccezionale che si verifica durante l'esecuzione di un programma e ne altera il normale flusso di esecuzione, richiedendo una gestione alternativa del flusso stesso. Situazioni che causano eccezioni sono ad esempio:
+
+-Dati di input errati | -Errori nei dispositivi | -Unavailability | -Errori di programmazione | -Accesso ad un riferimento di valore null | -Esaurimento delle risorse di sistema;
+
+La caratteristica che rende le eccezioni uno strmento così potente per gestire gli errori è la PROPAGAZIONE dell'eccezone. Quando viene riscontrato un errore durante l'esecuzione di un metodo, l'eccezione viene propagata a ritroso lungo tutta la catena di chiamate a metodi che ha portato all'errore. Ogni metodo della catena può interrompere la propagazione e gestire l'errore, oppure continuare la propagazione ai metodi superiori, interrompendo la propria esecuzione nel punto in cui è stata generata l'eccezione. Se nessun metodo della catena gestisce l'eccezione e si risale fino all'entry point dell'applicazione (main), essa viene TERMINATA. Propagare un'eccezione è detto "EXCEPTION TRHOWING" e fermare la propagazione "EXCHEPTION CATCHING". Essendo un linguaggio object oriented, anche per la gestione degli errori, il Java impiega classi ed oggetti specifici. Per poter essere propagato, un oggetto deve estendere la classe java.lang.Throwable, ed il linguaggio mette a disposizione del programmatore una classe di eccezione di base, java.lang.Exception, che rappresenta un errore generico. Queste classi permettono di usare un messaggio di errore, di tipo String, utile a descrivere la causa dell'eccezione, e lo stack-trace, che rappresenta la catena di chiamate a metodi che ha provocato la condizione di errore. Esiste inoltre la classe Error, che rappresenta errori molto gravi che solitamente portano al blocco completo del sistema. Inoltre le classi Exception ed Error, possono essere estese per gestire tipologie dii errore più specifiche.
+////////////////////////////////////////
+GESTIONE DEGLI ERRORI: (CHECKED E UNCECKED)
+
+Le eccezioni possono essere suddivise in due macrotipologie:
+
+-Checked exceptions = Eccezioni che devono essere obbligatoriamente gestite.
+-Unchecked exceptions = Eccezioni che non devono essere necessariamente gestite (queste ultime vengono anche dette eccezioni di runtime e, dato che non è necessario dichiarare il costrutto throws in un metodo che le lancia, possono provocare il blocco dell'applicazione.
+
+Le JDK e le principali librerie Java mettono a disposizione un gran numero di tipi di eccezioni da impiegare in varie circostanze e lo sviluppatore può crearne di nuove estendendo Exception oppure una classe più specifica.
+
+Le eccezioni possono poi essere stanziate utilizzandone il costruttore. Quando si istanzia un'eccezione, solitamente si passa come parametro un messaggio che dà indicazioni sulle cause che hanno provocato l'errore. Una volta istanziata, l'eccezione può essere propagata dal metodo che l'ha generata utilizzando l'istruzione throw. 
+////////////////////////////
+GESTIONE DELL'ERRORE (istruzioni try-catch)
+
+Se un metodo genera un'eccezione che poi non viene gestita, essa porta alla terminazione dell'applicazione. Per gestire in modo corretto le eccezioni, java fornisce il costrutto try-catch. Per mezzo di tale costrutto è possibile gestire un bloccco di codice. Riguardo le eccezioni multiple, un blocco di codice può potenzialmente generare più tipologie di eccezione che devono essere gestite. Per fare ciò si può ricorrere a tre approcci, in base alla strategia di gestione degli errori:
+
+-istruzioni catch sequenziali
+-istruzioni catch multi-eccezione
+-uso del polimorfismo
+
+E' inoltre possibile costruire blocchi try-catch annidati per gestire eccezioni a più livelli.
+
+ISTRUZIONE FINALLY...
+
+Quando si gestiscono errori, occorre tenere conto del fatto che il normale flusso di esecuzione del programma viene interrotto quando viene lanciata un'eccezione. E' spesso necessario eseguire comunque alcune operazioni indipendentemente dal fatto che sia stata generata una eccezione: ciò può essere fatto utilizzando l'istruzione "finally"
+
+
+
+
+

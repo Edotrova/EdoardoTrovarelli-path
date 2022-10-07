@@ -1,0 +1,84 @@
+PROGRAMMAZIONE MULTI-THREAD
+
+Java è un linguaggio multi-threaded, consente cioè di sfruttare il meccanismo della concorrenza logica. Parti separate di un programma possono essere eseguite come se fossero processate parallelamente, potendo però accedere a spazi di indirizzsamento della memoria condivisi in modo da poter scambiare in modo semplice le informazioni necessarie al corretto funzioanmento dell'applicazione.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+JAVA.LANG.THREAD E' LA CLASSE CHE IMPELMENTA LA CPU VIRTUALE ed è regolata dai seguenti principi: 
+
+-due o più thread possono condividere il codice che essi eseguono. Questo avviene quando tali thread eseguono il loro codice di istanze della stessa classe.
+-due o più thread possono condividere i dati su cui eseguono delle operazioni. Questo avviene quando tali thread condividono l'accesso ad un oggetto comune.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+All'interno della Java Virtual Machine, ogni thread assume in ogni istante un determianto stato:
+
+-initial: un thread si trova in questa condizione tra il momento in cui viene creato ed il momento in cui comincia effettivamente a funzionare.
+
+-runnable: è lo stato in cui si trova normalmente un thread dopo che ha cominciato a funzioanre. Il thread in questo stato può, in qualunque moemento, essere eseguito.
+
+-running: il thread è attualemnte in esecuzione. 
+
+-blocked: il trhead è in attesa di un determinato evento.
+
+-dead: il trhead ha terminato la sua esecuzione.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+La JVM mette a disposizione due metodi per eseguire il codice di un thread. La specializzazione della classe Thread e l'implementazione dell'interfaccia Runnable, quest'ultima importando poi il metodo run della classe Thread.
+
+CLASSE THREAD:
+
+La classe Thread è una classe non astratta attraverso la quale si accede a tutte le principali funzionalità per la gestione dei thread. Essa presenta un metodo, run(), che se definito in uan sottoclasse, permette di impostare il codice che verrà eseguito all'esecuzione del trhead. Una volta istanziato, è possibile avviare un trhead invocando il metodo start(). Il trhead inizierà l'esecuzione del metodo run(), fino al suo completamento o al verificarsi di un errore non gestito.
+
+-Metodo Thread.sleep(long), il suo scopo è quello di sospendere temporaneamente l'esecuzione di un trhead.
+
+-Metodo Join, permette di rimanere in attesa fino a quando il metodo per cui esso è stato chiamato non termina la propria esecuzione. 
+
+I trhead sono a tutti gli effetti classi Java, pertanto essi possono accedere normalmente a variabili ed oggetti che rientrino nel loro scope. Dato che i trhead possono essere eseguiti contemporaneamente, nasce l'esigenza di un meccanismo di sincronizzazione che permetta di regolare l'esecuzione dei trhead e l'accesso ai dati condivisi. Per evitare tali problemi di accesso alle risorse nell'esecuzione parallela di trhead è necessario ricorrere al lock che serve a far sì che sono uno o più trhead predeterminati psosano per un certo periodo di tempo avre l'esclusivo accesso ad un elemento. Il java implementa la funzione di lock per mezzo del costrutto synchronized. E' possibile definire un metodo synchronnized e la Virtual Machine garantirà che esso venga eseguito solo da un thread alla volta. Oltre a sincronizzare interi metodi, è anche solo possibile sincronizzare blocchi di codice utilizzando il costrutto syncrhonized{...}
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////
+
+LEGGERE E SCRIVERE FILES
+
+Le informazioni memorizzate in classi e variabili di un programma viste fino ad ora, vengono definite transienti in quanto cessano di esistere quando il programma viene terminato.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

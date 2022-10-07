@@ -1,0 +1,43 @@
+LAMBDA FUNCTIONS
+
+-A partire dalla vedrisone 8 del linguaggio, Java ha introdotto nuovi costrutti volti a migliorarne l'efficenza, già presenti in altri linguaggi. Per esempio le lambda functions che fanno parte del paradigma di programmazione funzionale. 
+Una funzione lambda è una funzione anonima che possiamo passare o ottenere come ritorno dall'invocazione di un metodo. Essa ha una lista di parametri ed un corpo, analogamente a dei metodi. Le funzioni lambda sono particolarmente utilizzate quando è richiesta la definizione di una interfaccia per invocare un metodo. 
+
+Classi anonime...
+
+Quando è necessario implementare classi che vengono utilizzate una volta sola nell'applicazione, è possibile utilizzare le classi anonime. Questa funzione è particolarmente utilizzata quando si programmano le interfacce applicative in swing o javaFX, in cui è necessario definire classi che gestiscono eventi da tastiera e mouse per tutti gli elementi grafici con i quali l'utente può interagire. In tali situazioni, anzichè definire una classe in modo standard, assegnandole un file e rendendola disponibile per tutta l'applicazione, si può definire una classe anonima, che sarà visibile ed utilizzabile solo nel punto in cui essa viene definita e dove è effettivamente necessaria.
+
+Le Interfacce come ActionListener, caratterizzate da un solo metodo, vengono definite interfacce funzionali e sono molto comuni sia nelle librerie java di base che nei fraemwork di terze parti. Altri esempi di interfacce funzionali sono Runnable, Comparator, FileFilter; le interfacce funzionali possono essere implementate con funzioni lambda.
+
+////////////////////////////////////
+
+UN'INTERFACCIA FUNZIONALE E' UNA INTERFACCIA CON UN SOLO METODO. 
+
+/////////////////////////////////////
+
+L'INTERFACCIA PREDICATE<T> RAPPRESENTA CON IL SOLO METODO BOOLEAN.
+
+//////////////////////////////////
+
+JAVA STREAM
+
+Per permettere una agevole gestione delle operazioni di manipolazione di raggruppamenti di dati, Java mette a disposizione il costrutto Stream. Uno stream è un'interfaccia che restituisce un flusso di dati sul quale è possibile effettuare operazioni di filtro, mappa e riduzione. Lo stream può lavorare sia in modo sequenziale che parallelo. Esso può essere visto come una catena di operazioni sui dati che ha una sorgente, degli elementi intermedi ed una destinazione (pipeline). La sorgente dello stream è l'elemento che lo genera. Lo stream generato può essere finito o infinito. Le operazioni intermedie applicano trasformazioni allo stream restituendo uno stream modificato che può essere a sua volta sottoposto ad altre opzioni o terminato. La concatenazione delle oprazioni intermedie definisce le pipeline dello stream. 
+
+OPERAZIONI INTERMEDIE STREAM 
+
+Le operazioni intermedie sono lazy, cioè vengono eseguite solo se è necessario per l'operazione finale. Le operazioni intermedie possono essere di tipo: Iteration (permette di iterare su gruppi di elementi, sostituendo i costrutti for e while); Filtering (Permette di selezioanre elementi che soddisfino una condizione (predicato); Mapping (Permette di convertire raggruppamenti in alotri raggruppamenti associati a stream modificati). Le destinazioni sono operazoni finali della pipeline dello stream che generano un risultato finale, terminando di fatto la catena della manipolazione dello stream.
+
+/////////////////////////////////////////////
+Tipologie di destinazione sono:
+
+Matching (permette di verificare una condizione rispetto al contenuto dello stream)
+
+Reduction (permette di ridurre la sequenza di elementi dello stream ad un valore)
+
+Collection (Molto simile alla riduzione, permette di raggruppare gli elementi dello stream in una collezione.
+
+
+
+APACHE MAVEN
+
+E' uno strumento di build managment molto diffuso nell'ambito della programmazione Java, soprattutto in ambito enterprise. L'elemento centrale del sistema è il gestore delle dipendenze, che permette di gestire in modo efficiente ed automatizzato l'importazione delle librerie esterne all'interno delle proprie applicazioni. 
