@@ -1,0 +1,25 @@
+JAVA PERSISTENCE API
+
+
+La Java Persistence Api è una specifica relativa alla persistenza, che in senso generale indica la capacità degli oggetti Java di sopravvivere oltre al ciclo di vita dell'applicaizone che li ha generati (in pratica serve a salvare nel tempo gli oggetti creati, cosa molto utile in ambito entreprise). Gli oggetti che vengopno poi salvati prendono il nome di Entities.
+
+USARE JPA:
+
+JPA non è uno strumento o un fraemwork che possa esser eutilizzato direttamente, ma è piuttosto un insieme di concetti che possono essere implementati attraverso tools o fraemwork (il fraemwork più diffuso in questo senso è Hibernate).
+Hibernate è stato rilasciato per la prima volta nel 2002 e si è evoluto nel tempo per supportare sempre maggiori funzioni, seguendo lo sviluppo delle specifiche JPA. Hibernate, come le altre implementazioni di JPA, definisce uno strato ORM (Objectg Relational Mapping).
+
+L'OBJECT RELATIONAL MAPPING si concentra sulla necessità di trovare una corrispondenza tra la struttura delle classi Java, costruite secondo il paradigma Object Oriented, e la struttura dei database relazionali, realizzati per mezzo di tabelle e relazioni. Lo strato ORM è responsabile della conversione degli oggetti Java ain tabelle e viceversa.
+
+Vedere cosa è un database PostGre SQL.
+
+Dopo aver abilitato JPA tra i facets del progetto, occorre aggiungere nel pom.xml la dipendenza dalle librerie Hibernate. Una volta configurati i parametri dell'applicazione è necessario effettuare la mappatura delle classi del modello che devono essere rese persistenti e diventare quindi delle Entities. Per effettuare il mapping è possibile utilizzare apposite annotations da inserire nel codice sorgente delle classi, che appartengono al package javax.persistence.
+
+Quando si implementa una applicazione con entità persistenti, possono presentarsi due scenari:
+
+Le tabelle relative alle entities sono già presenti nel database: In questo caso occorre utilizzare le annotation in modo da far corrispondere classi e tabelle utilizzando l'annotation Table ed attributi con colonne utilizzando Column.
+Oppure, caso n.2, le tabelle relative alle entities non sono ancora state create; questo può avvenire sia per nuove applicazioni che per applicazioni pre-esistenti a cui si aggiungono classi e funzionalità. In questo caso, per velocizzare lo sviluppo, si può impiegare la funzione di autogenerazione dei DDL. 
+
+Quando si lavora con le Entities in JPA, si stanno manipolando oggetti che possono rappresentare elementi già presenti in un db, oppure elementi che se salvati, verranno inseriti nel db, passando da uno stato di persistenza all'altro. Tali passaggi rappresentano il cilo di vita delle entities. L'insieme di tutti gli oggetti in stato Managed rappresenta Persistence Context.
+
+
+L'Entity Manager è una classe JPA che permette di eseguire le interazioni con il DB e viene configurata per mezzo dei parametri presenti nel file persistence.xml e può essere istanziato a partire dalla classe EntityManagerFactory

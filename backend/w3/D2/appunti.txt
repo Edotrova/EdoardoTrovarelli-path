@@ -1,0 +1,57 @@
+JPA E CHIAVE PRIMARIA:
+
+Fino ad ora si è visto come gestire manualmente, sia con JDBC che con JPA, la primary key delle entities che vengono rese persistenti sul database. Ogni volta che si necessita di salvare un nuovo elemento è infatti necessario fornire una primary diversa da tutte quelle già presenti sulla tabella per permettere di identificare univocamente la riga che si inserisce. La generazione delle chiavi primarie, quando esse non vengono scelte tra i campi sinificativi di un oggetto (come il n. targa o il codice fiscale) può essere demandata a meccanismi automatici, in base al database impiegato.
+
+COME GENERARE AUTOMATICAMENTE UNA CHIAVE PRIMARIA? Dipende dal tipo di DBMS utilizzata:
+
+-Chiavi generate autonomamente dall'applicazione
+-Campi delle tabelle configurati per valorizzarsi con un valore incrementato automaticamente ad ogni inserimento
+-Sequenze. Oggetti del db che possono venire interrogati con una apposita query e forniscono un valore seuqenziale diverso ad ogni interrogazione.
+-Tabelle ad.hoc. Il sistema gestisce una tabella in uci memorizza l'ultimo valore precedentmeente assegnato agli oggetti e ha la responsbailità di incrementarlo.
+
+
+Tramite l'annotazione GeneretedValue, utilizzata in congiunzione con l'annotazione @id usata per identificare il campo che deve fungere da chiave primaria dell'entità, è possibile indicare al sistema che deve gestire in modo automatico la generazione della chiave primaria. Se non si fornisce alcun parametro aggiuntivo all'annotazione, il JPA selezionerà una strategia che permetta di avere un identificativo che sia univoco nell'ambito dell'intero database, generando una sequence chiamata hibernate_sequence che verrà usata per uttte le enties del database.
+
+MAPPING DELLE RELAZIONI:
+
+Come visto in precedenza, sia nei database relazionali che nel paradigma Object Oriented è possibile stabilire relazioni tra entità. Esistono varie tipologie di relazioni, definite dal numero di elementi presenti ad ogni capo della relazione stessa:
+
+-One-to-one (uno-a-uno)
+-One-to-Many(uno-a-molti)
+-Many-to-many(molti a molti)
+
+Il JPA permette di mappare queste relazioni automatizzandone la gestione.
+
+ONE TO ONE:
+
+Le relazioni One to one possono esseere di due tipi:
+-Component o embedded - due oggetti risiedono in una sola tabella (es. l'indirizzo di una azienda)
+-Classiche - due tabelle corrispondono a due oggetti
+
+Una relazione one-to-one embedded si ha quando un'entità è interamente racchiusa all'interno di un'altra entità, ossia è un componente dell'altra entità. La relazione one-to-one classica si una nei casi in cui è preferibile avere due tabelle che rappresentano due aspetti diffwerenti di una certa entità che devono essere gestiti differtnetemtne, o che devono evolvere iun modo indipendente (ES. PROFILO DI IDENTIFICAZIONI O ANAGRAFICHE)
+
+
+CASCADING:
+
+Hibernate consente di propagare le operazioni (es.salvataggio o eliminazione) effettuate su una entità alla entità ad essa collegate, tramite il meccanismo del cascading. Hibernate definisce diversi tipi di cascading, definiti nelle relazioni: ognuna per ogni pezzo di crud.
+Se non si specifica niente, per default non si ha cascading. Esso può essere impiegato sia su relazioni Onetoone che su relazioni di altro tipo descritte nel seguito.
+
+
+RELAZIONE UNO A MOLTI:
+
+La relazione uno a molto può essere vista da due "prospettive diverse":
+
+-L'oggetto A ha una relazione con molti oggetti B
+-Ogni oggetto B ha una relazione con uno e un solo oggetto A
+
+Hibernate mappa queste due prospettive usando @OnetoMany e @ManytoOne:
+
+-OneToMany va sull'oggetto che contiene
+-ManyToOne va sull'oggetto contenuto
+
+
+
+
+
+
+

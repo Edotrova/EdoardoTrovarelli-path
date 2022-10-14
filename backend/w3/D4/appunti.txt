@@ -1,0 +1,14 @@
+COSTRUTTI JPQL:
+
+Il linguaggio utilizzato nella scrittura di query JPA, pur essendo molto simile nella struttura all'SQL, è strettamente legato al modello di oggetti definito dall'OBJECT Oriented. Gli elementi a cui si fa riferimento  quando si scrivono queries in JPQL sono classi e proprietà, invece di tabelle e colonne. Ad occuparsi della traduzione automatico delle queries in formato SQL standard è lo strato ORM.
+
+
+UNA PATH EXPRESSION è una variabile identificatrice seguita dall'operatore di navigazione "." e da un campo persistente o un campo di associazione, quest'ultimo può contenere un singolo oggetto o una collezione.
+
+
+
+CRITERIA API
+
+
+Le JPA Criteria API forniscono un modo alternativo per definire queries JPA, che è utile principalmente per costruire queries dinamicamente quando la loro struttura non è nota in fase di scrittura del codice ma solo a runtime. Le queries JPQL sono definite come stringhe, in modo analogo all'SQL, mentre le Criteria sono definite istanziando oggetti Java che rappresentano elementi della query stessa.
+Uno dei vantaggi principali delle Criteri API è che gli eventuali errori possono essere rilevati già in fase di compilazione, piuttosto che runtime, anche se inizialmente il loro utilizzo può sembrare più complesso e meno immediato rispetto al JPQL. Le queries JPQL e le Criteria Queries sono equivalenti dal punto di vista della potenzialità e dell'efficienza, per cui spesso l'impiego dell'una o dell'altra può essere basato sulle preferenze dello sviluppatore.

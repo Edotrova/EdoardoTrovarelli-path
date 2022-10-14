@@ -1,0 +1,42 @@
+JPA ed Ereditarietà
+
+JPA e Hibernate forniscono allo sviluppatore strumenti volti a gestire efficacemente il paradigm mismatch cioè la discordanza tra il modello di applicazixone degli oggetti ed il modello die dati su un DB relazionale. Questi strumenti sono necessari perchè il concetto di ereditarietà non esiste nel paradigma relazionale.
+
+In quanti modi può essere rappresentata l'ereditarietà in Hibernate e JPA?   IN 3 MODI:
+
+ -Single table (una singola tabella che contiene padri e figli. La strategia Single Table si usa annotando la classe padre con @Inheritance(strategy = SINGLE_TABLE). Questa strategia ha performance migliori, perchè tutte le Query vengono fatte su una sola tabella, ma può diventare disordinata e poco gestibile )
+
+-Joined (una tabella per il padre ed una per ciascun figlio, ma i figli contengono solo gli attributi non in comune con il padre. In questo modo si avrà uno schema più mantenibile, perchè ogni modifica di un figlio impatta solo sulla tabellla del figlio ed ogni modifica del padre impatta solo sulla tabella padre.)
+
+-Table-per-class (tabelle complete per ogni figlio. Usando questa strategia, ogni modifica al padre impatterà anche su tutte le altre tabelle delle figli).
+
+
+Un caso speciale di ereditarietà si ha quando la classe padre non è persistentee quidni in teoria non dovrebbe possedere annotazioni Hibernate. In realtà per far funzionare l'ereditarietà dovremo annotare la classe padre come se fosse persistente e poi aggiungere @MappedSuperClass subito dopo @Entity, per specificare che la classe padre è solo mappata e non deve esserew resa persistente.
+
+
+JPQL
+
+JPA Query API consente di usare Java Persistence Query Language (JPQL) o SQL, la differenza tra le due soluzioni sta nel fastto che la JPQL restituisce entità mentre SQL restituisce record. Le Query API supportano due tipi di Query:
+
+-Named query: sono tipicamente usate per esegure le operazioni più comuni, vengono infatti memorizzate e riutilizzate quando è necessario. L'utilizzo della named Query porta con sè tre benefici: migliora la riusabilità della query, facilita il mantenimento del codice, incrementa la performance del sistema.
+
+-Dynamic Query: vengono crereate secondo le necessità applicastive del momento.
+
+JPQL supporta tre tipi di istruzioni: SELECT, UPDATE, DELETE.
+
+Select viene utilizzata per recuperare entità dal database, il formato tipico è il seguente: SELECT c FROM Categoria c WHERE c.nome LIKE: nomeCategoria ORDER BY c.data
+
+L'istruzione UPDATE vine utilizzata per aggiotare le entità di un certo tipo:
+
+UPDATE Categoria c SET nome = "libri", ...WHERE c.nome = "lettura" (la clausola SET viene utilizzata per indicare i valori dei campi persistenti da modificare ed il nuovo valore a questi associato. La clausola WHERE ha esattamente la stessa funzione vista el caso dell'istruzione SELECT.
+
+L'istruzione DELETE consente di eliminare le entità di un certo tipo che soddisfano le condizioni definite nella clausola 	WHERE
+
+DELETE Categoria c WHERE c.nome = "prova"
+
+
+PER CONCLUDERE...
+Il metodo setMaxResults consente di specificare il massimo numero di entità che devono essere recuperate, mentre setFirstResult consente di specificare la posizione del primo risultato nel risultato
+
+
+
