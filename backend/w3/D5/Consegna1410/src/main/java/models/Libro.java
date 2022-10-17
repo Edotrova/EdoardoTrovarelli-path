@@ -1,21 +1,39 @@
 package models;
 
+import javax.persistence.Entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-	public class Libro extends Items {
+@Entity
+@Data
+@NoArgsConstructor
+	public class Libro extends ElementoLetterario {
 
-		 String autore;
-		Genere genere;
+	private String autore;
+	private String genere;
 		
-		public Libro(long ISBN, String titolo, int anno, int numero, String autore, Genere g) {
+		public Libro(String ISBN, String titolo, int anno, int numero, String autore, String genere) {
 			super(ISBN, titolo, anno, numero);
-			this.genere = g;
+			this.genere = genere;
 			this.autore = autore;
 		}
 
 	public String getAutore() {
 		
 		return autore;
+	}
+	
+	public void setAutore(String autore) {
+		this.autore = autore;
+	}
+	
+	public String getGenere() {
+		return genere;
+	}
+	
+	public void setGenere(String genere) {
+		this.genere = genere;
 	}
 
 

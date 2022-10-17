@@ -5,7 +5,6 @@ public enum Periodicita {
 
 	SETTIMANALE,
 	MENSILE,
-	SEMESTRALE,
-	UNDEFINED;
+	SEMESTRALE;
 	
 }

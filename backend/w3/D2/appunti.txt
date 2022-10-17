@@ -1,3 +1,7 @@
+In un DBMS (Un database management system, in informatica, è un sistema software progettato per consentire la creazione, la manipolazione e l'interrogazione efficiente di database, per questo detto anche "gestore o motore del database", è ospitato su architettura hardware dedicata oppure su semplice computer) possiamo avere due tabelle collegate. 
+
+
+
 JPA E CHIAVE PRIMARIA:
 
 Fino ad ora si è visto come gestire manualmente, sia con JDBC che con JPA, la primary key delle entities che vengono rese persistenti sul database. Ogni volta che si necessita di salvare un nuovo elemento è infatti necessario fornire una primary diversa da tutte quelle già presenti sulla tabella per permettere di identificare univocamente la riga che si inserisce. La generazione delle chiavi primarie, quando esse non vengono scelte tra i campi sinificativi di un oggetto (come il n. targa o il codice fiscale) può essere demandata a meccanismi automatici, in base al database impiegato.
