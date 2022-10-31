@@ -15,30 +15,32 @@ body{
    background-image: url(../asset/back-img.jpg) ; 
     background-size: cover; 
    max-width: 100%;
-  max-height: 100%;
-   background-position: center;
+    height: 80vh;
+ 
+   
+
  }
 
-//  @media screen and (max-width: 1400px) {
-//     #primopiano {
-//         @include imgresp;
-//        min-height: 60vh;
-//     }
-//   }
+ @media screen and (max-width: 1400px) {
+    #primopiano {
+        @include imgresp;
+       min-height: 60vh;
+    }
+  }
 
-//   @media screen and (max-width: 700px) {
-//     #primopiano {
-//         @include imgresp;
-//        min-height: 45vh;
-//     }
-//   }
+  @media screen and (max-width: 700px) {
+    #primopiano {
+        @include imgresp;
+       min-height: 45vh;
+    }
+  }
 
-//   @media screen and (max-width: 450px) {
-//     #primopiano {
-//         @include imgresp;
-//        min-height: 40vh;
-//     }
-//   }
+  @media screen and (max-width: 450px) {
+    #primopiano {
+        @include imgresp;
+       min-height: 40vh;
+    }
+  }
 
 
 #myVideo {
