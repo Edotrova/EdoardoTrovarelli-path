@@ -10,23 +10,27 @@ import com.edoardotrovarelli.GestionePrenotazioni.entities.Prenotazione;
 import com.edoardotrovarelli.GestionePrenotazioni.repositories.PostazioneRepository;
 import com.edoardotrovarelli.GestionePrenotazioni.repositories.PrenotazioneRepository;
 
+import exception.PostazionePrenotazioneException;
+import exception.UtentePrenotazioneException;
+
 @Service
 public class PrenotazioneService {
 
 	@Autowired
-	PrenotazioneRepository pre;
+	PrenotazioneRepository pr;
 	
-	public void savePrenotazione(Prenotazione pr) {
-		pre.save(pr);
+	public void save(Prenotazione p) throws UtentePrenotazioneException, PostazionePrenotazioneException {
+		
+		if(pr.existsByUtenteAndGiorno(p.getUtente(), p.getGiorno())) {
+			throw new UtentePrenotazioneException();
+		}
+		if(pr.existsByPostazioneAndGiorno(p.getPostazione(), p.getGiorno())) {
+			throw new PostazionePrenotazioneException();
+		}
+		pr.save(p);
 	}
 	
-	public List<Prenotazione> getAllPrenotazione(){
-		return pre.findAll();
-	}
 	
-	public void deletePrenotazioneById(long id) {
-		pre.deleteById(id);
-	}
 	
 	
 }

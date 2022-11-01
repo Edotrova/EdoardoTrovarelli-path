@@ -1,13 +1,14 @@
 package com.edoardotrovarelli.GestionePrenotazioni.entities;
 
+import java.util.List;
+
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -18,25 +19,27 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "postazione")
+@Table(name = "edificio")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
 @ToString
-public class Postazione {
+public class Edificio {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String descrizione;
+	private String nomeEdificio;
+	private String indirizzo;
 	
-	@Enumerated(EnumType.STRING)
-	private Tipo tipo;
-	private int numeroMassimoPartecipanti;
 	
 	@ManyToOne
-	@JoinColumn(name = "edificio_id")
-	private Edificio edificio;
+	@JoinColumn(name = "citta_id")
+	private Citta citta;
+	
+	@OneToMany(mappedBy="edificio")
+	private List<Postazione> postazioni;
+	
 }
