@@ -1,0 +1,46 @@
+1) Trasforma una String in un array di caratteri;
+
+	public class Solution {
+    public static String[] stringToArray(String s) {
+        return s.split(" ");
+    }
+}
+
+
+
+
+
+2) Inverti l'ordine dei char in una stringa (world -> dlrow)
+
+	public class Kata {
+
+  public static String solution(String str) {
+    return new StringBuilder(str).reverse().toString();
+  }
+
+}
+
+
+
+
+
+3) Converti una String in un numero intero.
+
+public class StringToNumber {
+  public static int stringToNumber(String str) {
+    return Integer.parseInt(str);
+  }
+}
+
+
+
+
+
+4) Raddoppia tutti gli int presenti in un array.
+
+import java.util.*;
+public class Maps {
+  public static int[] map(int[] arr) {
+      return Arrays.stream(arr).map(x -> x*2).toArray();
+  }
+}
