@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styleCreate.css">
+    <title>Update Book</title>
+</head>
+<body>
+    <form id="myForm">
+        
+        <input type="text" id="title" name="title" placeholder="Type the book's title... ">
+       
+        <input type="text" id="author" name="author" placeholder="Type the book's author...">
+       
+        <input type="number" id="year" name="year" placeholder="Type the book's year..."
+        min="1453" max="2022">
+        
+        <textarea id="review" name="review" placeholder="Type your review..." rows="4" cols="50"></textarea>
+       
+        <input type="text" id="sharedBy" name="sharedBy" placeholder="Type who is sharing this book...">
+       
+        <select name="availability" id="availability">
+            <option value="option">option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <input type="submit" value="update" class="update">
+        <input type="button" value="Go Back" class="goBack">
+    </form>
+
+    <script type="module">
+        import { checkUserAccess, checkUserRole, getUserRole, isUserAdmin } from "./assets/js/class.js"
+        let access = checkUserAccess()
+        let checkRole = isUserAdmin()
+        console.log(checkRole)
+        if (!access) {
+
+            location.href = 'index.html'
+
+        }
+        if (!isUserAdmin){ 
+
+            let removeForm = document.querySelector('#myForm')
+            removeForm.remove()
+
+        }
+    </script>
+    <script type="module" src="./assets/js/update.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

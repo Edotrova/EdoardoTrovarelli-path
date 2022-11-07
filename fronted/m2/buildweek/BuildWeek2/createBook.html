@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styleCreate.css">
+    <title>Create a New Book</title>
+</head>
+<body>
+    
+    <h1>Insert a new Book</h1>
+    <form class="myForm">
+       
+        <input type="text" id="title" class="grid-item1" name="title" placeholder="Type the book's title... ">
+        
+        <input type="text" id="author" class="grid-item2" name="author" placeholder="Type the book's author...">
+        
+        <input type="number" id="year" class="grid-item3" name="year" placeholder="Type the year..."
+        min="1453" max="2022">
+        
+        <input type="text" id="sharedBy" class="grid-item4"  name="sharedBy" placeholder="Type who is sharing this book...">
+        
+        <select name="availability" id="availability" class="grid-item5">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+      
+        <textarea id="review" class="grid-item6" name="review" placeholder="A little bit about it..." rows="4" cols="50"></textarea>
+        
+        <input type="submit" value="Submit" class="submit grid-item7">
+        <input type="button" value="Go Back" class="goBack grid-item8">
+    </form>
+
+    <script type="module" src="./assets/js/createBook.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module">
+        import {checkUserAccess} from "./assets/js/class.js"
+        let access = checkUserAccess()
+        if (!access) {
+            
+            location.href = "login.html"
+
+        }
+    </script>
+</body>
+</html>
