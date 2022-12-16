@@ -1,0 +1,12 @@
+
+#card-element{
+    padding: 20px;
+}
+
+.submit{
+    background-color: white !important;
+    color:rgb(4, 40, 198) !important;
+    border: none !important;
+    font-weight: bold !important;
+    margin-top: 10px !important;
+}

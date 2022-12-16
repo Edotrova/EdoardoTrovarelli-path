@@ -1,0 +1,41 @@
+<header
+  class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+    <svg class="bi me-2" role="img" aria-label="Bootstrap">
+      <use xlink:href="#bootstrap"></use>
+    </svg>
+  </a>
+
+  <ul class="nav col-12 justify-content-center mb-md-0">
+    <li><a [routerLink]="(['/pages/home'])" class="nav-link px-2 link-secondary">Home</a></li>
+    <li><a [routerLink]="(['/assistenza'])" class="nav-link px-2 link-dark">Assistenza</a></li>
+    <li><a [routerLink]="(['/overview'])" class="nav-link px-2 link-dark">Overview</a></li>
+  </ul>
+
+</header>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-2 "></div>
+    <div class="col-8  mt-2">
+      <ngbd-carousel-basic></ngbd-carousel-basic>
+    </div>
+    <div class="col-2 "></div>
+  </div>
+</div>
+
+<div id="contenitore">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>
+        
+          AngelDriver risolve il probelma della guida in stato di ebbrezza che solo nel 2021 è stato causa di x numero
+          di decessi.
+          Chiama uno dei nostri driver e fagli guidare la tua auto, al termine del servizio se ne andrà in autonomia con
+          il suo monopattino elettrico pieghevole riposto nel bagagliaio prima della corsa.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

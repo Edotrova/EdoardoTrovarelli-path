@@ -1,0 +1,48 @@
+
+#titolo{
+    font-size: 100px;
+}
+
+#immagine{
+    background-image: url(../../../assets/Centro_Storico_Roma_Mappa.jpg);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-size: cover;
+    opacity: 0.2;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color:  rgb(4, 40, 198) !important;
+   
+    
+    margin-top: 90px !important;
+    margin-bottom: 50px !important;
+    font-weight: bold;
+}
+
+button {
+    background-color:  rgb(4, 40, 198) !important;
+    color: white !important;
+  
+}
+
+
+a{
+    text-align: center !important;
+    color:  rgb(4, 40, 198) !important;
+    text-decoration: underline;
+   
+
+}
+
+.register {
+    margin-top: 35px !important;
+   
+}
+
